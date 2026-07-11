@@ -221,6 +221,15 @@ form .boton:hover{background:var(--granate-oscuro)}
 .form-ok{grid-column:1/-1;display:none;background:var(--granate);color:#fff;border-radius:10px;padding:18px 22px;font-size:.92rem}
 .form-ok.visible{display:block}
 
+/* ---------- ubicación / mapa ---------- */
+#ubicacion{background:var(--papel)}
+.mapa-direccion{color:var(--tinta);opacity:.75;margin-bottom:28px}
+.mapa-caja{border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff}
+.mapa-caja iframe{display:block;width:100%;height:440px;border:0}
+@media(max-width:640px){.mapa-caja iframe{height:300px}}
+.mapa-enlace{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:.85rem;letter-spacing:.04em;color:var(--granate);text-decoration:none;font-weight:500}
+.mapa-enlace:hover{text-decoration:underline}
+
 /* ---------- contacto / pie ---------- */
 #contacto{background:var(--granate);color:#fff;padding:90px 0 0}
 .contacto-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:70px;align-items:start}
@@ -666,6 +675,18 @@ form .boton:hover{background:var(--granate-oscuro)}
 </section>
 
 <!-- ===================== CONTACTO / PIE ===================== -->
+<section id="ubicacion">
+  <div class="wrap">
+    <p class="eyebrow">Com arribar-hi</p>
+    <h2 class="titulo">Església parroquial de Santa Maria</h2>
+    <p class="mapa-direccion">Plaça Major, s/n · 46500 Sagunt (València)</p>
+    <div class="mapa-caja">
+      <iframe src="https://www.google.com/maps?q=Esgl%C3%A9sia+Parroquial+de+Santa+Maria,+Pla%C3%A7a+Major,+Sagunt&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de l'Església parroquial de Santa Maria, Sagunt"></iframe>
+    </div>
+    <a class="mapa-enlace" href="https://www.google.com/maps/search/?api=1&query=Esgl%C3%A9sia%20Parroquial%20de%20Santa%20Maria%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunt%2C%20Val%C3%A8ncia" target="_blank" rel="noopener">Obrir en Google Maps →</a>
+  </div>
+</section>
+
 <footer id="contacto">
   <div class="wrap">
     <div class="contacto-grid">
@@ -676,7 +697,7 @@ form .boton:hover{background:var(--granate-oscuro)}
       </div>
       <div>
         <h3>Seu canònica</h3>
-        <p>Església parroquial de Santa Maria<br>Plaça Major, s/n<br>46500 Sagunt (València)<br><a href="https://www.google.com/maps/search/?api=1&query=Esgl%C3%A9sia%20Parroquial%20de%20Santa%20Maria%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunt%2C%20Val%C3%A8ncia" target="_blank" rel="noopener">Com arribar-hi (Google Maps) →</a></p>
+        <p>Església parroquial de Santa Maria<br>Plaça Major, s/n<br>46500 Sagunt (València)</p>
       </div>
       <div>
         <h3>Contacte</h3>

@@ -222,6 +222,15 @@ form .boton:hover{background:var(--granate-oscuro)}
 .form-ok{grid-column:1/-1;display:none;background:var(--granate);color:#fff;border-radius:10px;padding:18px 22px;font-size:.92rem}
 .form-ok.visible{display:block}
 
+/* ---------- ubicación / mapa ---------- */
+#ubicacion{background:var(--papel)}
+.mapa-direccion{color:var(--tinta);opacity:.75;margin-bottom:28px}
+.mapa-caja{border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff}
+.mapa-caja iframe{display:block;width:100%;height:440px;border:0}
+@media(max-width:640px){.mapa-caja iframe{height:300px}}
+.mapa-enlace{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:.85rem;letter-spacing:.04em;color:var(--granate);text-decoration:none;font-weight:500}
+.mapa-enlace:hover{text-decoration:underline}
+
 /* ---------- contacto / pie ---------- */
 #contacto{background:var(--granate);color:#fff;padding:90px 0 0}
 .contacto-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:70px;align-items:start}
@@ -667,6 +676,18 @@ form .boton:hover{background:var(--granate-oscuro)}
 </section>
 
 <!-- ===================== CONTACTO / PIE ===================== -->
+<section id="ubicacion">
+  <div class="wrap">
+    <p class="eyebrow">Cómo llegar</p>
+    <h2 class="titulo">Iglesia parroquial de Santa María</h2>
+    <p class="mapa-direccion">Plaça Major, s/n · 46500 Sagunto (Valencia)</p>
+    <div class="mapa-caja">
+      <iframe src="https://www.google.com/maps?q=Iglesia+Parroquial+de+Santa+Mar%C3%ADa,+Pla%C3%A7a+Major,+Sagunto&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la Iglesia parroquial de Santa María, Sagunto"></iframe>
+    </div>
+    <a class="mapa-enlace" href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Parroquial%20de%20Santa%20Mar%C3%ADa%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunto%2C%20Valencia" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+  </div>
+</section>
+
 <footer id="contacto">
   <div class="wrap">
     <div class="contacto-grid">
@@ -677,7 +698,7 @@ form .boton:hover{background:var(--granate-oscuro)}
       </div>
       <div>
         <h3>Sede canónica</h3>
-        <p>Iglesia parroquial de Santa María<br>Plaça Major, s/n<br>46500 Sagunto (Valencia)<br><a href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Parroquial%20de%20Santa%20Mar%C3%ADa%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunto%2C%20Valencia" target="_blank" rel="noopener">Cómo llegar (Google Maps) →</a></p>
+        <p>Iglesia parroquial de Santa María<br>Plaça Major, s/n<br>46500 Sagunto (Valencia)</p>
       </div>
       <div>
         <h3>Contacto</h3>
