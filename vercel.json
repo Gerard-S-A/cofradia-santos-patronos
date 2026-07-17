@@ -1,7 +1,11 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/cofradia-santos-patronos.html" },
-    { "source": "/va", "destination": "/cofradia-santos-patronos-va.html" }
+    { "source": "/va", "destination": "/cofradia-santos-patronos-va.html" },
+    { "source": "/aviso-legal", "destination": "/aviso-legal.html" },
+    { "source": "/aviso-legal-va", "destination": "/aviso-legal-va.html" },
+    { "source": "/politica-privacidad", "destination": "/politica-privacidad.html" },
+    { "source": "/politica-privacidad-va", "destination": "/politica-privacidad-va.html" }
   ],
   "headers": [
     {
