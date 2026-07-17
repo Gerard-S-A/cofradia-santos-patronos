@@ -16,7 +16,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<style>
+:root{
+  --granate:#5b1b14;
+  --granate-oscuro:#43130e;
+  --crema:#f6f2ec;
+  --papel:#fdfcf9;
+  --tinta:#241512;
+  --linea:rgba(91,27,20,.16);
+  --serif:'Instrument Serif', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);color:var(--tinta);background:var(--papel);line-height:1.7;font-size:16px}
+a{color:var(--granate)}
+.wrap{max-width:760px;margin:0 auto;padding:64px 24px 100px}
+.volver{display:inline-block;margin-bottom:32px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--granate)}
+.cabecera-legal{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.idioma-mini{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:32px}
+.idioma-mini a{text-decoration:none;color:#6b564f}
+.idioma-mini a.activo{color:var(--granate);font-weight:600;text-decoration:underline}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);color:var(--granate);margin-bottom:8px}
+.fecha{font-size:.8rem;color:#6b564f;margin-bottom:40px}
+h2{font-family:var(--serif);font-weight:400;font-size:1.4rem;color:var(--granate);margin:36px 0 12px}
+p, li{color:#43322d;margin-bottom:12px}
+ul{padding-left:22px;margin-bottom:12px}
+strong{color:var(--tinta)}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.92rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);vertical-align:top}
+th{color:var(--granate);font-weight:600;width:32%}
+</style>
 </head>
 <body>
 <main class="wrap">
@@ -57,6 +86,8 @@
   <ul>
     <li><strong>L'entitat bancària</strong> corresponent, únicament en cas de domiciliar el pagament de la quota anual.</li>
     <li><strong>Web3Forms</strong>, proveïdor tecnològic que gestiona de forma automatitzada l'enviament del formulari d'alta al correu de la Confraria, actuant com a encarregat del tractament.</li>
+    <li><strong>Vercel Analytics</strong>, servei d'anàlisi web que recull dades agregades i anònimes de navegació (pàgines visitades, origen, dispositiu). No utilitza cookies persistents ni identifica usuaris de forma individual.</li>
+    <li><strong>Google Maps</strong>, servei de mapes de Google LLC que s'integra en la web per a mostrar la ubicació de la parròquia. En carregar, Google pot recollir dades de navegació conforme a la seua pròpia política de privacitat.</li>
   </ul>
 
   <h2>6. Durant quant de temps conservarem les dades?</h2>
@@ -74,9 +105,12 @@
   <p>Pot exercir estos drets escrivint a <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener">cofradiasantospatronossagunto@gmail.com</a>, adjuntant còpia d'un document que acredite la seua identitat. Així mateix, té dret a presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) si considera que el tractament no s'ajusta a la normativa vigent.</p>
 
   <h2>8. Cookies</h2>
-  <p>Este lloc web no utilitza cookies pròpies de seguiment ni d'analítica. Únicament es realitzen peticions a Google Fonts per a la càrrega de tipografies, en el curs normal de la visualització de la pàgina.</p>
-  <p>El servei d'anàlisi web <strong>Vercel Analytics</strong> està configurat en mode sense cookies, d'acord amb la seua política de privacitat. No s'utilitzen cookies de rastreig ni de publicitat.</p>
-  <p>Este lloc web incrusta un mapa de <strong>Google Maps</strong> per a mostrar la ubicació de la seu canònica. Google pot recollir dades d'ús i ubicació d'acord amb la seua pròpia política de privacitat. El mapa es carrega de forma diferida (<em>lazy loading</em>) i només s'activa quan l'usuari interactua amb ell.</p>
+  <p>Este lloc web no utilitza cookies pròpies de seguiment ni d'analítica pròpies. S'utilitzen els següents serveis de tercers que poden instal·lar cookies:</p>
+  <ul>
+    <li><strong>Vercel Analytics</strong>: recull dades d'ús agregades i anònimes (pàgines visitades, duració, dispositiu). No utilitza cookies persistents.</li>
+    <li><strong>Google Maps</strong>: en carregar el mapa, Google pot instal·lar cookies tècniques i de rendiment.</li>
+    <li><strong>Google Fonts</strong>: les peticions a Google Fonts per a la càrrega de tipografies poden incloure cookies tècniques.</li>
+  </ul>
 
   <p style="margin-top:40px"><a href="aviso-legal-va.html">Veure Avís Legal →</a></p>
 </main>
