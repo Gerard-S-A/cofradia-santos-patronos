@@ -24,12 +24,14 @@
 <meta name="twitter:description" content="Cofradía de los Santos Patronos Abdón y Senén de Sagunto (Valencia). Historia, festividad del 30 de julio, programa de actos y alta de nuevos cofrades.">
 <meta name="twitter:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
 
+<meta name="theme-color" content="#5b1b14">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --granate:#5b1b14;
@@ -319,7 +321,10 @@ form .boton:hover{background:var(--granate-oscuro)}
 <nav>
   <div class="nav-in">
     <a class="marca" href="#inicio" aria-label="Inicio">
-      <img src="/assets/logo.png" alt="Emblema de la Cofradía de los Santos Abdón y Senén, patronos de Sagunto" width="38" height="53">
+      <picture>
+        <source srcset="/assets/logo-nav.webp" type="image/webp">
+        <img src="/assets/logo-nav.png" alt="Emblema de la Cofradía de los Santos Abdón y Senén, patronos de Sagunto" width="38" height="53">
+      </picture>
       <span>S.S. Abdón y Senén<br><small style="font-family:var(--sans);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#7a2a20">Patronos de Sagunto</small></span>
     </a>
     <div class="nav-derecha">
@@ -353,7 +358,10 @@ form .boton:hover{background:var(--granate-oscuro)}
     <span>S.S. ABDÓN Y SENÉN</span>
   </div>
   <div class="hero-in">
-    <img class="emblema" src="/assets/logo-blanco.png" alt="Emblema de la Cofradía: San Abdón con la palma y San Senén con el racimo de uvas, junto a dos leones, bajo un arco con la inscripción «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335">
+    <picture>
+      <source srcset="/assets/logo-emblema.webp" type="image/webp">
+      <img class="emblema" src="/assets/logo-emblema.png" alt="Emblema de la Cofradía: San Abdón con la palma y San Senén con el racimo de uvas, junto a dos leones, bajo un arco con la inscripción «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335">
+    </picture>
     <p class="sub">· Patronos de Sagunto desde 1644 ·</p>
     <h1>Fe, tradición y devoción a los Santos de la Piedra</h1>
     <div class="hero-botones">
@@ -640,17 +648,17 @@ form .boton:hover{background:var(--granate-oscuro)}
         <p>Una vez enviada la solicitud, la secretaría se pondrá en contacto para confirmar el alta y la forma de pago de la cuota anual (8€).</p>
       </div>
 
-      <form id="form-alta" novalidate action="https://api.web3forms.com/submit" method="POST">
+      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="2b865f31-585a-4808-9c1e-cc7a540c2978">
         <input type="checkbox" name="botcheck" class="honeypot" style="display:none">
         <input type="hidden" name="subject" value="Nueva solicitud de alta de cofrade">
         <input type="hidden" name="from_name" value="Web Cofradía Santos Patronos">
         <div class="campo"><label for="nombre">Nombre *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name"></div>
         <div class="campo"><label for="apellidos">Apellidos *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name"></div>
-        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required></div>
+        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + letra mayúscula. NIE: X/Y/Z + 7 números + letra mayúscula"></div>
         <div class="campo"><label for="nacimiento">Fecha de nacimiento *</label><input id="nacimiento" name="nacimiento" type="date" required></div>
-        <div class="campo"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-        <div class="campo"><label for="telefono">Teléfono *</label><input id="telefono" name="telefono" type="tel" required autocomplete="tel"></div>
+        <div class="campo"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nombre@correo.com" title="Introduzca un correo electrónico válido (debe contener @ y un dominio)" autocomplete="email"></div>
+        <div class="campo"><label for="telefono">Teléfono *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduzca un número de teléfono de 9 dígitos" autocomplete="tel"></div>
         <div class="campo ancho"><label for="direccion">Dirección postal</label><input id="direccion" name="direccion" type="text" autocomplete="street-address"></div>
         <div class="campo"><label for="cuota">Modalidad de cuota *</label>
           <select id="cuota" name="cuota" required>
@@ -667,7 +675,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         </div>
         <div class="campo ancho"><label for="mensaje">Observaciones</label><textarea id="mensaje" name="mensaje" placeholder="Cualquier información que desee hacernos llegar"></textarea></div>
         <label class="consentimiento"><input type="checkbox" id="privacidad" required>
-          <span>He leído y acepto la <a href="politica-privacidad.html" target="_blank">política de privacidad</a>. Los datos facilitados serán tratados por la Cofradía de los Santos Abdón y Senén únicamente para la gestión del alta y las comunicaciones propias de la hermandad. *</span>
+          <span>He leído y acepto la <a href="politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Los datos facilitados serán tratados por la Cofradía de los Santos Abdón y Senén únicamente para la gestión del alta y las comunicaciones propias de la hermandad. *</span>
         </label>
         <button class="boton" type="submit">Enviar solicitud</button>
         <p class="form-ok" id="form-ok" role="status">Gracias. Hemos recibido su solicitud de alta: la secretaría de la Cofradía se pondrá en contacto con usted en los próximos días.</p>
@@ -682,7 +690,10 @@ form .boton:hover{background:var(--granate-oscuro)}
   <div class="wrap">
     <div class="contacto-grid">
       <div>
-        <img class="logo-pie" src="/assets/logo-blanco.png" alt="Emblema de la Cofradía" width="120" height="168">
+        <picture>
+          <source srcset="/assets/logo-footer.webp" type="image/webp">
+          <img class="logo-pie" src="/assets/logo-footer.png" alt="Emblema de la Cofradía" width="120" height="168" loading="lazy">
+        </picture>
         <h2>Cofradía<br>Santos Patronos<br>Sagunto</h2>
         <p class="lema-pie">S.S. Abdón y Senén · Patronos de Sagunto desde 1644</p>
       </div>
@@ -710,6 +721,17 @@ form .boton:hover{background:var(--granate-oscuro)}
 </footer>
 
 <script>
+document.getElementById('telefono').addEventListener('keydown', function(e){
+  if(e.key.length===1 && !/[0-9]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
+});
+document.getElementById('telefono').addEventListener('paste', function(e){
+  const t=(e.clipboardData||window.clipboardData).getData('text');
+  if(!/^[0-9]*$/.test(t)) e.preventDefault();
+});
+document.getElementById('dni').addEventListener('input', function(){this.value=this.value.toUpperCase()});
+document.getElementById('dni').addEventListener('keydown', function(e){
+  if(e.key.length===1 && !/[0-9A-Za-z]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
+});
 document.getElementById('form-alta').addEventListener('submit', async function(e){
   e.preventDefault();
   if(!this.checkValidity()){ this.reportValidity(); return; }

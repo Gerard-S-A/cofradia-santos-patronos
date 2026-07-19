@@ -23,12 +23,14 @@
 <meta name="twitter:description" content="Confraria dels Sants Patrons Abdó i Senent de Sagunt (València). Història, festivitat del 30 de juliol, programa d'actes i alta de nous confrares.">
 <meta name="twitter:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
 
+<meta name="theme-color" content="#5b1b14">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --granate:#5b1b14;
@@ -54,7 +56,7 @@ a{color:inherit}
 .eyebrow::before{content:"";width:34px;height:1px;background:var(--granate)}
 h2.titulo{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.5vw,3.2rem);line-height:1.08;color:var(--granate);margin-bottom:14px}
 h3.subtitulo{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--granate);margin:34px 0 10px}
-.lead{max-width:60ch;color:#4a3833}
+.lead{color:#4a3833}
 section{padding:96px 0}
 :focus-visible{outline:2px solid var(--granate);outline-offset:3px}
 
@@ -196,7 +198,7 @@ header.hero{position:relative;background:var(--granate);color:#fff;overflow:hidd
 .doc h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--tinta)}
 .doc span{font-size:.78rem;color:#6b564f}
 .doc .descargar{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--granate);white-space:nowrap}
-.transparencia-nota{margin-top:28px;font-size:.86rem;color:#6b564f;max-width:64ch}
+.transparencia-nota{margin-top:28px;font-size:.86rem;color:#6b564f}
 
 /* ---------- registro ---------- */
 #registro{background:var(--crema)}
@@ -318,7 +320,10 @@ form .boton:hover{background:var(--granate-oscuro)}
 <nav>
   <div class="nav-in">
     <a class="marca" href="#inicio" aria-label="Inici">
-      <img src="/assets/logo.png" alt="Emblema de la Confraria dels Sants Abdó i Senent, patrons de Sagunt" width="38" height="53">
+      <picture>
+        <source srcset="/assets/logo-nav.webp" type="image/webp">
+        <img src="/assets/logo-nav.png" alt="Emblema de la Confraria dels Sants Abdó i Senent, patrons de Sagunt" width="38" height="53">
+      </picture>
       <span>S.S. Abdó i Senent<br><small style="font-family:var(--sans);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#7a2a20">Patrons de Sagunt</small></span>
     </a>
     <div class="nav-derecha">
@@ -352,7 +357,10 @@ form .boton:hover{background:var(--granate-oscuro)}
     <span>S.S. ABDÓ I SENENT</span>
   </div>
   <div class="hero-in">
-    <img class="emblema" src="/assets/logo-blanco.png" alt="Emblema de la Confraria: Sant Abdó amb la palma i Sant Senent amb el raïm, junt a dos lleons, davall un arc amb la inscripció «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335">
+    <picture>
+      <source srcset="/assets/logo-emblema.webp" type="image/webp">
+      <img class="emblema" src="/assets/logo-emblema.png" alt="Emblema de la Confraria: Sant Abdó amb la palma i Sant Senent amb el raïm, junt a dos lleons, davall un arc amb la inscripció «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335">
+    </picture>
     <p class="sub">· Patrons de Sagunt des de 1644 ·</p>
     <h1>Fe, tradició i devoció als Sants de la Pedra</h1>
     <div class="hero-botones">
@@ -493,7 +501,7 @@ form .boton:hover{background:var(--granate-oscuro)}
           <h3>Juliol</h3><span>2026</span>
         </div>
         <div class="cal-tabla">
-          <div class="dia-sem">L</div><div class="dia-sem">T</div><div class="dia-sem">C</div><div class="dia-sem">J</div><div class="dia-sem">V</div><div class="dia-sem">S</div><div class="dia-sem">G</div>
+          <div class="dia-sem">L</div><div class="dia-sem">T</div><div class="dia-sem">C</div><div class="dia-sem">J</div><div class="dia-sem">V</div><div class="dia-sem">S</div><div class="dia-sem">D</div>
           <div></div><div></div>
           <div class="dia">1</div><div class="dia">2</div><div class="dia">3</div><div class="dia">4</div><div class="dia">5</div>
           <div class="dia">6</div><div class="dia">7</div><div class="dia">8</div><div class="dia">9</div><div class="dia">10</div><div class="dia">11</div><div class="dia">12</div>
@@ -639,17 +647,17 @@ form .boton:hover{background:var(--granate-oscuro)}
         <p>Una vegada enviada la sol·licitud, la secretaria es posarà en contacte per a confirmar l'alta i la forma de pagament de la quota anual (8€).</p>
       </div>
 
-      <form id="form-alta" novalidate action="https://api.web3forms.com/submit" method="POST">
+      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="2b865f31-585a-4808-9c1e-cc7a540c2978">
         <input type="checkbox" name="botcheck" class="honeypot" style="display:none">
         <input type="hidden" name="subject" value="Nova sol·licitud d'alta de confrare (VA)">
         <input type="hidden" name="from_name" value="Web Confraria Sants Patrons">
         <div class="campo"><label for="nombre">Nom *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name"></div>
         <div class="campo"><label for="apellidos">Cognoms *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name"></div>
-        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required></div>
+        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + lletra majúscula. NIE: X/Y/Z + 7 números + lletra majúscula"></div>
         <div class="campo"><label for="nacimiento">Data de naixement *</label><input id="nacimiento" name="nacimiento" type="date" required></div>
-        <div class="campo"><label for="email">Correu electrònic *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-        <div class="campo"><label for="telefono">Telèfon *</label><input id="telefono" name="telefono" type="tel" required autocomplete="tel"></div>
+        <div class="campo"><label for="email">Correu electrònic *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nom@correu.com" title="Introduïu un correu electrònic vàlid (ha de contindre @ i un domini)" autocomplete="email"></div>
+        <div class="campo"><label for="telefono">Telèfon *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduïu un número de telèfon de 9 dígits" autocomplete="tel"></div>
         <div class="campo ancho"><label for="direccion">Adreça postal</label><input id="direccion" name="direccion" type="text" autocomplete="street-address"></div>
         <div class="campo"><label for="cuota">Modalitat de quota *</label>
           <select id="cuota" name="cuota" required>
@@ -666,7 +674,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         </div>
         <div class="campo ancho"><label for="mensaje">Observacions</label><textarea id="mensaje" name="mensaje" placeholder="Qualsevol informació que vulga fer-nos arribar"></textarea></div>
         <label class="consentimiento"><input type="checkbox" id="privacidad" required>
-          <span>He llegit i accepte la <a href="politica-privacidad-va.html" target="_blank">política de privacitat</a>. Les dades facilitades seran tractades per la Confraria dels Sants Abdó i Senent únicament per a la gestió de l'alta i les comunicacions pròpies de la germandat. *</span>
+          <span>He llegit i accepte la <a href="politica-privacidad-va.html" target="_blank" rel="noopener">política de privacitat</a>. Les dades facilitades seran tractades per la Confraria dels Sants Abdó i Senent únicament per a la gestió de l'alta i les comunicacions pròpies de la germandat. *</span>
         </label>
         <button class="boton" type="submit">Enviar sol·licitud</button>
         <p class="form-ok" id="form-ok" role="status">Gràcies. Hem rebut la seua sol·licitud d'alta: la secretaria de la Confraria es posarà en contacte amb vosté en els pròxims dies.</p>
@@ -681,7 +689,10 @@ form .boton:hover{background:var(--granate-oscuro)}
   <div class="wrap">
     <div class="contacto-grid">
       <div>
-        <img class="logo-pie" src="/assets/logo-blanco.png" alt="Emblema de la Confraria" width="120" height="168">
+        <picture>
+          <source srcset="/assets/logo-footer.webp" type="image/webp">
+          <img class="logo-pie" src="/assets/logo-footer.png" alt="Emblema de la Confraria" width="120" height="168" loading="lazy">
+        </picture>
         <h2>Confraria<br>Sants Patrons<br>Sagunt</h2>
         <p class="lema-pie">S.S. Abdó i Senent · Patrons de Sagunt des de 1644</p>
       </div>
@@ -709,6 +720,17 @@ form .boton:hover{background:var(--granate-oscuro)}
 </footer>
 
 <script>
+document.getElementById('telefono').addEventListener('keydown', function(e){
+  if(e.key.length===1 && !/[0-9]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
+});
+document.getElementById('telefono').addEventListener('paste', function(e){
+  const t=(e.clipboardData||window.clipboardData).getData('text');
+  if(!/^[0-9]*$/.test(t)) e.preventDefault();
+});
+document.getElementById('dni').addEventListener('input', function(){this.value=this.value.toUpperCase()});
+document.getElementById('dni').addEventListener('keydown', function(e){
+  if(e.key.length===1 && !/[0-9A-Za-z]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
+});
 document.getElementById('form-alta').addEventListener('submit', async function(e){
   e.preventDefault();
   if(!this.checkValidity()){ this.reportValidity(); return; }
