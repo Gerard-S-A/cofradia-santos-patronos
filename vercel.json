@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/cofradia-santos-patronos.html" },
     { "source": "/va", "destination": "/cofradia-santos-patronos-va.html" },
