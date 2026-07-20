@@ -159,9 +159,9 @@ header.hero{position:relative;background:var(--granate);color:#fff;overflow:hidd
 @media(max-width:900px){.calendario{position:static}}
 .cal-cab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
 .cal-cab h3{font-family:var(--serif);font-weight:400;font-size:1.6rem}
-.cal-cab span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cal-cab span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85)}
 .cal-tabla{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;font-size:.86rem}
-.cal-tabla .dia-sem{font-size:.66rem;letter-spacing:.14em;color:rgba(255,255,255,.6);padding-bottom:8px}
+.cal-tabla .dia-sem{font-size:.66rem;letter-spacing:.14em;color:rgba(255,255,255,.85);padding-bottom:8px}
 .cal-tabla .dia{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.85)}
 .cal-tabla .dia.evento{border:1px solid rgba(255,255,255,.7);cursor:default}
 .cal-tabla .dia.fiesta{background:#fff;color:var(--granate);font-weight:500;border-radius:999px 999px 4px 4px}
@@ -173,10 +173,10 @@ header.hero{position:relative;background:var(--granate);color:#fff;overflow:hidd
 .agenda-titulo{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:6px}
 .agenda-item{display:grid;grid-template-columns:74px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.18)}
 .agenda-fecha{font-family:var(--serif);font-size:1.9rem;line-height:1;text-align:center}
-.agenda-fecha small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;margin-top:6px;color:rgba(255,255,255,.7)}
+.agenda-fecha small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;margin-top:6px;color:rgba(255,255,255,.85)}
 .agenda-item h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;margin-bottom:2px}
 .agenda-item p{font-size:.86rem;color:rgba(255,255,255,.78)}
-.agenda-item .hora{display:inline-block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:2px 10px;margin:6px 8px 0 0}
+.agenda-item .hora{display:inline-block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:2px 10px;margin:6px 8px 0 0}
 
 /* ---------- junta directiva ---------- */
 #junta{background:var(--papel);padding-top:0}
@@ -340,8 +340,8 @@ form .boton:hover{background:var(--granate-oscuro)}
       <details class="idioma-selector">
         <summary>VA</summary>
         <ul class="idioma-menu">
-          <li><a href="https://santospatronossagunto.com/" hreflang="es">Castellà</a></li>
-          <li><a href="https://santospatronossagunto.com/va" class="activo" aria-current="page">Valencià</a></li>
+          <li><a href="/cofradia-santos-patronos.html" hreflang="es">Castellà</a></li>
+          <li><a href="https://santospatronossagunto.com/" class="activo" aria-current="page">Valencià</a></li>
         </ul>
       </details>
       <button class="hamburguesa" aria-expanded="false" aria-controls="menu" onclick="const m=document.getElementById('menu');m.classList.toggle('abierto');this.setAttribute('aria-expanded',m.classList.contains('abierto'))">Menú</button>
@@ -359,7 +359,7 @@ form .boton:hover{background:var(--granate-oscuro)}
   <div class="hero-in">
     <picture>
       <source srcset="/assets/logo-emblema.webp" type="image/webp">
-      <img class="emblema" src="/assets/logo-emblema.png" alt="Emblema de la Confraria: Sant Abdó amb la palma i Sant Senent amb el raïm, junt a dos lleons, davall un arc amb la inscripció «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335">
+      <img class="emblema" src="/assets/logo-emblema.png" alt="Emblema de la Confraria: Sant Abdó amb la palma i Sant Senent amb el raïm, junt a dos lleons, davall un arc amb la inscripció «S.S. Abdón y Senén · Patronos de Sagunto»" width="240" height="335" fetchpriority="high">
     </picture>
     <p class="sub">· Patrons de Sagunt des de 1644 ·</p>
     <h1>Fe, tradició i devoció als Sants de la Pedra</h1>
@@ -406,7 +406,10 @@ form .boton:hover{background:var(--granate-oscuro)}
     <div class="santos-intro">
       <div>
         <figure class="foto-arco">
-          <img src="/assets/anda-santos.jpg" alt="Anda processional amb les imatges de Sant Abdó i Sant Senent, patrons de Sagunt" width="634" height="800" loading="lazy">
+          <picture>
+            <source srcset="/assets/anda-santos.webp" type="image/webp">
+            <img src="/assets/anda-santos.jpg" alt="Anda processional amb les imatges de Sant Abdó i Sant Senent, patrons de Sagunt" width="634" height="800" loading="lazy">
+          </picture>
         </figure>
         <p class="foto-pie">Imatges actuals · Joaquín Tormo Catalá, 1940</p>
       </div>
@@ -674,7 +677,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         </div>
         <div class="campo ancho"><label for="mensaje">Observacions</label><textarea id="mensaje" name="mensaje" placeholder="Qualsevol informació que vulga fer-nos arribar"></textarea></div>
         <label class="consentimiento"><input type="checkbox" id="privacidad" required>
-          <span>He llegit i accepte la <a href="politica-privacidad-va.html" target="_blank" rel="noopener">política de privacitat</a>. Les dades facilitades seran tractades per la Confraria dels Sants Abdó i Senent únicament per a la gestió de l'alta i les comunicacions pròpies de la germandat. *</span>
+          <span>He llegit i accepte la <a href="/politica-privacidad-va.html" target="_blank" rel="noopener">política de privacitat</a>. Les dades facilitades seran tractades per la Confraria dels Sants Abdó i Senent únicament per a la gestió de l'alta i les comunicacions pròpies de la germandat. *</span>
         </label>
         <button class="boton" type="submit">Enviar sol·licitud</button>
         <p class="form-ok" id="form-ok" role="status">Gràcies. Hem rebut la seua sol·licitud d'alta: la secretaria de la Confraria es posarà en contacte amb vosté en els pròxims dies.</p>
@@ -707,14 +710,14 @@ form .boton:hover{background:var(--granate-oscuro)}
       <div>
         <h3>Contacte</h3>
         <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener">cofradiasantospatronossagunto@gmail.com</a><br>
+          <a href="mailto:cofradiasantospatronossagunto@gmail.com">cofradiasantospatronossagunto@gmail.com</a><br>
           <a href="https://www.instagram.com/santospatronossagunto/" target="_blank" rel="noopener">Instagram · @santospatronossagunto</a>
         </p>
       </div>
     </div>
     <div class="pie">
       <span>© 2026 Confraria dels Sants Abdó i Senent · Sagunt</span>
-      <span><a href="aviso-legal-va.html" style="color:inherit">Avís legal</a> · <a href="politica-privacidad-va.html" style="color:inherit">Política de privacitat</a></span>
+      <span><a href="/aviso-legal-va.html" style="color:inherit">Avís legal</a> · <a href="/politica-privacidad-va.html" style="color:inherit">Política de privacitat</a></span>
     </div>
   </div>
 </footer>
@@ -731,9 +734,28 @@ document.getElementById('dni').addEventListener('input', function(){this.value=t
 document.getElementById('dni').addEventListener('keydown', function(e){
   if(e.key.length===1 && !/[0-9A-Za-z]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
 });
+function validarDNI(valor){
+  valor=valor.toUpperCase().trim();
+  const letras='TRWAGMYFPDXBNJZSQVHLCKE';
+  let num;
+  if(/^[0-9]{8}[A-Z]$/.test(valor)){
+    num=parseInt(valor.substring(0,8));
+  } else if(/^[XYZ][0-9]{7}[A-Z]$/.test(valor)){
+    num=parseInt(valor[0].replace('X','0').replace('Y','1').replace('Z','2')+valor.substring(1,8));
+  } else {
+    return false;
+  }
+  return valor[valor.length-1]===letras[num%23];
+}
 document.getElementById('form-alta').addEventListener('submit', async function(e){
   e.preventDefault();
   if(!this.checkValidity()){ this.reportValidity(); return; }
+  if(!validarDNI(document.getElementById('dni').value)){
+    document.getElementById('dni').setCustomValidity('La lletra del DNI/NIE no és vàlida');
+    document.getElementById('dni').reportValidity();
+    document.getElementById('dni').setCustomValidity('');
+    return;
+  }
   const form = this;
   const boton = form.querySelector('.boton');
   boton.disabled = true;
@@ -760,6 +782,7 @@ document.getElementById('form-alta').addEventListener('submit', async function(e
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
   document.getElementById('menu').classList.remove('abierto');
 }));
+document.querySelector('.pie span:first-child').textContent='© '+new Date().getFullYear()+' Confraria dels Sants Abdó i Senent · Sagunt';
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
