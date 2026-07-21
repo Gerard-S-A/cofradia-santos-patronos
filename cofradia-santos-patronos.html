@@ -18,6 +18,7 @@
 <meta property="og:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
 <meta property="og:url" content="https://santospatronossagunto.com/">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cofradía S.S. Abdón y Senén · Patronos de Sagunto">
@@ -25,225 +26,15 @@
 <meta name="twitter:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
 
 <meta name="theme-color" content="#5b1b14">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="favicon-32.png" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="dns-prefetch" href="https://api.web3forms.com">
+<link rel="icon" href="/icons/favicon.ico" sizes="any">
+<link rel="icon" href="/icons/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
-<style>
-:root{
-  --granate:#5b1b14;
-  --granate-oscuro:#43130e;
-  --granate-claro:#7a2a20;
-  --crema:#f6f2ec;
-  --papel:#fdfcf9;
-  --tinta:#241512;
-  --linea:rgba(91,27,20,.16);
-  --serif:'Instrument Serif', Georgia, serif;
-  --sans:'DM Sans', system-ui, sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{font-family:var(--sans);color:var(--tinta);background:var(--papel);line-height:1.65;font-size:16px}
-img{max-width:100%;display:block}
-a{color:inherit}
-
-/* ---------- utilidades ---------- */
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--granate);display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--granate)}
-h2.titulo{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,4.5vw,3.2rem);line-height:1.08;color:var(--granate);margin-bottom:14px}
-h3.subtitulo{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--granate);margin:34px 0 10px}
-.lead{color:#4a3833}
-section{padding:96px 0}
-:focus-visible{outline:2px solid var(--granate);outline-offset:3px}
-
-/* ---------- navegación ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(253,252,249,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
-.nav-in{max-width:1320px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.marca{display:flex;align-items:center;gap:14px;text-decoration:none}
-.marca img{width:38px;height:auto;flex:none}
-.marca span{font-family:var(--serif);font-size:1.05rem;line-height:1.15;color:var(--granate)}
-.nav-links{display:flex;flex-wrap:wrap;gap:4px 15px;list-style:none;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
-.nav-links a{text-decoration:none;color:var(--tinta);padding:6px 0;border-bottom:1px solid transparent;transition:.2s}
-.nav-links a:hover{color:var(--granate);border-bottom-color:var(--granate)}
-.nav-links a.cta{background:var(--granate);color:#fff;padding:9px 18px;border-radius:999px;border:none}
-.nav-links a.cta:hover{background:var(--granate-oscuro)}
-@media(max-width:960px){.nav-links{display:none}.nav-links.abierto{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--papel);flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--linea);gap:14px}}
-.hamburguesa{display:none;background:none;border:1px solid var(--linea);border-radius:8px;padding:8px 12px;font-family:var(--sans);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--granate);cursor:pointer}
-@media(max-width:960px){.hamburguesa{display:block}}
-.nav-derecha{display:flex;align-items:center;gap:10px}
-.idioma-selector{position:relative;font-family:var(--sans)}
-.idioma-selector summary{list-style:none;cursor:pointer;background:none;border:1px solid var(--linea);border-radius:8px;padding:8px 12px;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--granate);display:flex;align-items:center;gap:6px}
-.idioma-selector summary::-webkit-details-marker{display:none}
-.idioma-selector summary::after{content:"▾";font-size:.65em}
-.idioma-selector[open] summary::after{content:"▴"}
-.idioma-menu{list-style:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:6px;min-width:150px;box-shadow:0 8px 24px rgba(91,27,20,.14);z-index:60}
-.idioma-menu li+li{margin-top:2px}
-.idioma-menu a{display:block;padding:8px 12px;border-radius:6px;text-decoration:none;color:var(--tinta);font-size:.82rem}
-.idioma-menu a:hover{background:var(--crema);color:var(--granate)}
-.idioma-menu a.activo{color:var(--granate);font-weight:600}
-
-/* ---------- hero ---------- */
-header.hero{position:relative;background:var(--granate);color:#fff;overflow:hidden;padding:100px 0 84px;text-align:center}
-.hero-fondo{position:absolute;inset:-40px 0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;user-select:none}
-.hero-fondo span{font-family:var(--serif);white-space:nowrap;font-size:clamp(3rem,8vw,6.2rem);line-height:1.12;color:rgba(255,255,255,.07);letter-spacing:.02em}
-.hero-in{position:relative;max-width:780px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:26px}
-.hero-in .emblema{width:min(240px,58vw);height:auto}
-.hero-in h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.05}
-.hero-in .sub{font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.hero-botones{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
-.boton{display:inline-block;text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:13px 28px;border-radius:999px;transition:.2s}
-.boton.blanco{background:#fff;color:var(--granate)}
-.boton.blanco:hover{background:var(--crema)}
-.boton.borde{border:1px solid rgba(255,255,255,.55);color:#fff}
-.boton.borde:hover{background:rgba(255,255,255,.1)}
-
-/* ---------- historia ---------- */
-#historia{background:var(--papel)}
-.historia-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:start;margin-top:10px}
-@media(max-width:860px){.historia-grid{grid-template-columns:1fr}}
-.historia-texto p{margin-bottom:18px;color:#43322d}
-.hitos{border-left:1px solid var(--linea);padding-left:28px;display:flex;flex-direction:column;gap:24px;margin-top:8px}
-.hito{position:relative}
-.hito::before{content:"";position:absolute;left:-33px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--granate)}
-.hito .anyo{font-family:var(--serif);font-size:1.45rem;color:var(--granate)}
-.hito p{font-size:.9rem;color:#55423c;max-width:44ch}
-
-/* ---------- santos ---------- */
-#santos{background:var(--crema)}
-.santos-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;margin-top:40px}
-@media(max-width:860px){.santos-intro{grid-template-columns:1fr}}
-.foto-arco{border-radius:999px 999px 14px 14px;overflow:hidden;border:1px solid var(--linea);background:#fff}
-.foto-arco img{width:100%;height:100%;object-fit:cover}
-.foto-pie{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--granate-claro);text-align:center;margin-top:12px}
-.santos-texto p{margin-bottom:16px;color:#43322d}
-.santos-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:56px}
-@media(max-width:760px){.santos-grid{grid-template-columns:1fr}}
-.santo{background:var(--papel);border:1px solid var(--linea);border-radius:200px 200px 14px 14px;padding:56px 34px 38px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
-.santo svg{width:70px;height:70px}
-.santo h3{font-family:var(--serif);font-weight:400;font-size:1.9rem;color:var(--granate)}
-.santo .atributo{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--granate-claro)}
-.santo p{font-size:.94rem;color:#4a3833;max-width:42ch}
-.patrimonio{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
-@media(max-width:760px){.patrimonio{grid-template-columns:1fr}}
-.patrimonio article{background:var(--papel);border:1px solid var(--linea);border-radius:14px;padding:32px}
-.patrimonio h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--granate);margin-bottom:10px}
-.patrimonio p{font-size:.93rem;color:#4a3833}
-.santos-nota{margin-top:40px;background:var(--granate);color:#fff;border-radius:14px;padding:30px 34px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:space-between}
-.santos-nota strong{font-family:var(--serif);font-weight:400;font-size:1.35rem;display:block}
-.santos-nota span{font-size:.9rem;color:rgba(255,255,255,.85)}
-
-/* ---------- novedades ---------- */
-.novedades-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
-@media(max-width:900px){.novedades-grid{grid-template-columns:1fr}}
-.noticia{border:1px solid var(--linea);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#fff;transition:.2s}
-.noticia:hover{border-color:var(--granate);transform:translateY(-3px)}
-.noticia time{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--granate)}
-.noticia h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.2}
-.noticia p{font-size:.92rem;color:#55423c;flex:1}
-.noticia a{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granate);text-decoration:none}
-.noticia a:hover{text-decoration:underline}
-
-/* ---------- actividades / calendario ---------- */
-#actividades{background:var(--granate);color:#fff}
-#actividades .eyebrow{color:#fff}
-#actividades .eyebrow::before{background:#fff}
-#actividades h2.titulo{color:#fff}
-#actividades .lead{color:rgba(255,255,255,.82)}
-.actividades-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;margin-top:48px;align-items:start}
-@media(max-width:900px){.actividades-grid{grid-template-columns:1fr}}
-.calendario{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:28px;position:sticky;top:100px}
-@media(max-width:900px){.calendario{position:static}}
-.cal-cab{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
-.cal-cab h3{font-family:var(--serif);font-weight:400;font-size:1.6rem}
-.cal-cab span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.cal-tabla{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;font-size:.86rem}
-.cal-tabla .dia-sem{font-size:.66rem;letter-spacing:.14em;color:rgba(255,255,255,.85);padding-bottom:8px}
-.cal-tabla .dia{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,.85)}
-.cal-tabla .dia.evento{border:1px solid rgba(255,255,255,.7);cursor:default}
-.cal-tabla .dia.fiesta{background:#fff;color:var(--granate);font-weight:500;border-radius:999px 999px 4px 4px}
-.cal-leyenda{display:flex;gap:22px;margin-top:18px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);flex-wrap:wrap}
-.cal-leyenda i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;vertical-align:-1px}
-.cal-leyenda .l1 i{border:1px solid rgba(255,255,255,.7)}
-.cal-leyenda .l2 i{background:#fff;border-radius:6px 6px 2px 2px}
-.agenda{display:flex;flex-direction:column}
-.agenda-titulo{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:6px}
-.agenda-item{display:grid;grid-template-columns:74px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.18)}
-.agenda-fecha{font-family:var(--serif);font-size:1.9rem;line-height:1;text-align:center}
-.agenda-fecha small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;margin-top:6px;color:rgba(255,255,255,.85)}
-.agenda-item h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;margin-bottom:2px}
-.agenda-item p{font-size:.86rem;color:rgba(255,255,255,.78)}
-.agenda-item .hora{display:inline-block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:2px 10px;margin:6px 8px 0 0}
-
-/* ---------- junta directiva ---------- */
-#junta{background:var(--papel);padding-top:0}
-.junta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
-@media(max-width:960px){.junta-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.junta-grid{grid-template-columns:1fr}}
-.miembro{border:1px solid var(--linea);border-radius:999px 999px 12px 12px;background:#fff;padding:34px 20px 24px;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center}
-.miembro .cargo{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--granate-claro)}
-.miembro .nombre{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2;color:var(--granate)}
-.miembro::before{content:"";width:26px;height:1px;background:var(--granate);order:1;margin:2px 0}
-.miembro .cargo{order:0}
-.miembro .nombre{order:2}
-.junta-nota{margin-top:26px;font-size:.86rem;color:#6b564f}
-
-/* ---------- transparencia ---------- */
-.docs{margin-top:44px;border-top:1px solid var(--linea)}
-.doc{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:22px 6px;border-bottom:1px solid var(--linea);text-decoration:none;transition:.2s}
-.doc:hover{background:var(--crema)}
-.doc h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--tinta)}
-.doc span{font-size:.78rem;color:#6b564f}
-.doc .descargar{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--granate);white-space:nowrap}
-.transparencia-nota{margin-top:28px;font-size:.86rem;color:#6b564f}
-
-/* ---------- registro ---------- */
-#registro{background:var(--crema)}
-.registro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;margin-top:8px;align-items:start}
-@media(max-width:900px){.registro-grid{grid-template-columns:1fr}}
-.registro-info p{margin-bottom:16px;color:#4a3833}
-.registro-info ul{list-style:none;margin:20px 0;display:flex;flex-direction:column;gap:12px}
-.registro-info li{padding-left:26px;position:relative;font-size:.94rem;color:#43322d}
-.registro-info li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border-radius:999px 999px 0 0;background:var(--granate)}
-form{background:var(--papel);border:1px solid var(--linea);border-radius:14px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:640px){form{grid-template-columns:1fr;padding:26px}}
-.campo{display:flex;flex-direction:column;gap:7px}
-.campo.ancho{grid-column:1/-1}
-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--granate)}
-input,select,textarea{font-family:var(--sans);font-size:.95rem;padding:12px 14px;border:1px solid var(--linea);border-radius:8px;background:#fff;color:var(--tinta)}
-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b1b14' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--granate);outline-offset:1px;border-color:var(--granate)}
-textarea{resize:vertical;min-height:96px}
-.consentimiento{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;font-size:.82rem;color:#55423c}
-.consentimiento input{width:16px;height:16px;margin-top:3px}
-form .boton{grid-column:1/-1;background:var(--granate);color:#fff;border:none;cursor:pointer;font-family:var(--sans);justify-self:start}
-form .boton:hover{background:var(--granate-oscuro)}
-.form-ok{grid-column:1/-1;display:none;background:var(--granate);color:#fff;border-radius:10px;padding:18px 22px;font-size:.92rem}
-.form-ok.visible{display:block}
-
-/* ---------- ubicación / mapa ---------- */
-.mapa-caja{margin-top:16px;border:1px solid rgba(255,255,255,.22);border-radius:12px;overflow:hidden;background:#fff}
-.mapa-caja iframe{display:block;width:100%;height:160px;border:0}
-.mapa-enlace{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:.78rem;letter-spacing:.03em;color:#fff;text-decoration:underline;text-underline-offset:3px}
-.mapa-enlace:hover{opacity:.75}
-
-/* ---------- contacto / pie ---------- */
-#contacto{background:var(--granate);color:#fff;padding:90px 0 0}
-.contacto-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:70px;align-items:start}
-.contacto-grid .logo-pie{width:120px;margin-bottom:24px}
-.contacto-grid h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.1;margin-bottom:14px}
-.contacto-grid h3{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px}
-.contacto-grid p, .contacto-grid a{color:rgba(255,255,255,.88);font-size:.95rem;text-decoration:none;line-height:1.8}
-.contacto-grid .lema-pie{font-size:clamp(.64rem,1.2vw,.85rem);letter-spacing:.02em;white-space:nowrap}
-.contacto-grid a:hover{text-decoration:underline}
-@media(max-width:860px){.contacto-grid{grid-template-columns:1fr}.contacto-grid .lema-pie{font-size:.82rem}}
-@media(max-width:380px){.contacto-grid .lema-pie{font-size:.76rem}}
-.pie{border-top:1px solid rgba(255,255,255,.22);padding:26px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/cofradia-santos-patronos.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -254,7 +45,7 @@ form .boton:hover{background:var(--granate-oscuro)}
       "name": "Cofradía de los Santos Patronos Abdón y Senén de Sagunto",
       "alternateName": "Cofradía Santos Patronos Sagunto",
       "url": "https://santospatronossagunto.com/",
-      "logo": "https://santospatronossagunto.com/apple-touch-icon.png",
+      "logo": "https://santospatronossagunto.com/icons/apple-touch-icon.png",
       "image": "https://santospatronossagunto.com/assets/anda-santos.jpg",
       "description": "Cofradía encargada de mantener viva la devoción a San Abdón y San Senén, los Santos de la Piedra, patronos de Sagunto desde 1644.",
       "email": "mailto:cofradiasantospatronossagunto@gmail.com",
@@ -318,14 +109,14 @@ form .boton:hover{background:var(--granate-oscuro)}
 <body>
 
 <!-- ===================== NAVEGACIÓN ===================== -->
-<nav>
+<nav aria-label="Navegación principal">
   <div class="nav-in">
     <a class="marca" href="#inicio" aria-label="Inicio">
       <picture>
         <source srcset="/assets/logo-nav.webp" type="image/webp">
         <img src="/assets/logo-nav.png" alt="Emblema de la Cofradía de los Santos Abdón y Senén, patronos de Sagunto" width="38" height="53">
       </picture>
-      <span>S.S. Abdón y Senén<br><small style="font-family:var(--sans);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#7a2a20">Patronos de Sagunto</small></span>
+      <span>S.S. Abdón y Senén<br><small class="subtitulo-nav">Patronos de Sagunto</small></span>
     </a>
     <div class="nav-derecha">
       <ul class="nav-links" id="menu">
@@ -338,14 +129,14 @@ form .boton:hover{background:var(--granate-oscuro)}
         <li><a href="#contacto">Contacto</a></li>
         <li><a class="cta" href="#registro">Hazte cofrade</a></li>
       </ul>
-      <details class="idioma-selector">
+      <details class="idioma-selector" aria-label="Seleccionar idioma">
         <summary>ES</summary>
         <ul class="idioma-menu">
           <li><a href="/" class="activo" aria-current="page">Castellano</a></li>
           <li><a href="/va">Valencià</a></li>
         </ul>
       </details>
-      <button class="hamburguesa" aria-expanded="false" aria-controls="menu" onclick="const m=document.getElementById('menu');m.classList.toggle('abierto');this.setAttribute('aria-expanded',m.classList.contains('abierto'))">Menú</button>
+      <button class="hamburguesa" aria-expanded="false" aria-controls="menu">Menú</button>
     </div>
   </div>
 </nav>
@@ -409,7 +200,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         <figure class="foto-arco">
           <picture>
             <source srcset="/assets/anda-santos.webp" type="image/webp">
-            <img src="/assets/anda-santos.jpg" alt="Anda procesional con las imágenes de San Abdón y San Senén, patronos de Sagunto" width="634" height="800" loading="lazy">
+            <img src="/assets/anda-santos.jpg" alt="Anda procesional con las imágenes de San Abdón y San Senén, patronos de Sagunto" width="634" height="800" loading="lazy" decoding="async">
           </picture>
         </figure>
         <p class="foto-pie">Imágenes actuales · Joaquín Tormo Catalá, 1940</p>
@@ -500,18 +291,18 @@ form .boton:hover{background:var(--granate-oscuro)}
     <p class="lead">Festividad de los gloriosos Santos Mártires Abdón y Senén · 29 y 30 de julio de 2026. Los cultos tienen lugar en la iglesia parroquial de Santa María.</p>
 
     <div class="actividades-grid">
-      <div class="calendario" role="table" aria-label="Calendario de julio de 2026">
+      <div class="calendario" role="group" aria-label="Calendario de julio de 2026">
         <div class="cal-cab">
           <h3>Julio</h3><span>2026</span>
         </div>
-        <div class="cal-tabla">
-          <div class="dia-sem">L</div><div class="dia-sem">M</div><div class="dia-sem">X</div><div class="dia-sem">J</div><div class="dia-sem">V</div><div class="dia-sem">S</div><div class="dia-sem">D</div>
+        <div class="cal-tabla" role="grid" aria-label="Calendario">
+          <div class="dia-sem" role="columnheader">L</div><div class="dia-sem" role="columnheader">M</div><div class="dia-sem" role="columnheader">X</div><div class="dia-sem" role="columnheader">J</div><div class="dia-sem" role="columnheader">V</div><div class="dia-sem" role="columnheader">S</div><div class="dia-sem" role="columnheader">D</div>
           <div></div><div></div>
           <div class="dia">1</div><div class="dia">2</div><div class="dia">3</div><div class="dia">4</div><div class="dia">5</div>
           <div class="dia">6</div><div class="dia">7</div><div class="dia">8</div><div class="dia">9</div><div class="dia">10</div><div class="dia">11</div><div class="dia">12</div>
           <div class="dia">13</div><div class="dia">14</div><div class="dia">15</div><div class="dia">16</div><div class="dia">17</div><div class="dia">18</div><div class="dia">19</div>
           <div class="dia">20</div><div class="dia">21</div><div class="dia">22</div><div class="dia">23</div><div class="dia">24</div><div class="dia">25</div><div class="dia">26</div>
-          <div class="dia">27</div><div class="dia">28</div><div class="dia evento" title="Toques y vuelos de campanas">29</div><div class="dia fiesta" title="Festividad de los Santos Patronos">30</div><div class="dia">31</div><div></div><div></div>
+          <div class="dia">27</div><div class="dia">28</div><div class="dia evento" role="gridcell" aria-label="29 de julio: Toques y vuelos de campanas" title="Toques y vuelos de campanas">29</div><div class="dia fiesta" role="gridcell" aria-label="30 de julio: Festividad de los Santos Patronos" title="Festividad de los Santos Patronos">30</div><div class="dia">31</div><div role="gridcell"></div><div role="gridcell"></div>
         </div>
         <div class="cal-leyenda">
           <span class="l1"><i></i>Acto de la Cofradía</span>
@@ -565,11 +356,11 @@ form .boton:hover{background:var(--granate-oscuro)}
     <p class="lead">En cumplimiento de nuestros estatutos, ponemos a disposición de los cofrades y del público la documentación institucional de la hermandad.</p>
 
     <div class="docs">
-      <a class="doc" href="docs/estatutos.pdf" target="_blank" rel="noopener">
+      <a class="doc" href="docs/estatutos.pdf" target="_blank" rel="noopener noreferrer">
         <div><h3>Estatutos de la Cofradía</h3><span>Proyecto de estatutos · PDF</span></div>
         <span class="descargar">Descargar ↓</span>
       </a>
-      <a class="doc" href="docs/memoria-2024-2025.pdf" target="_blank" rel="noopener">
+      <a class="doc" href="docs/memoria-2024-2025.pdf" target="_blank" rel="noopener noreferrer">
         <div><h3>Memoria del ejercicio 2024/2025</h3><span>Resumen de actividades, cultos y obra social · PDF</span></div>
         <span class="descargar">Descargar ↓</span>
       </a>
@@ -577,7 +368,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         <div><h3>Junta Directiva</h3><span>Composición y cargos para el periodo 2026–2030</span></div>
         <span class="descargar">Ver miembros ↓</span>
       </a>
-      <a class="doc" href="docs/programa-festividad-2026.pdf" target="_blank" rel="noopener">
+      <a class="doc" href="docs/programa-festividad-2026.pdf" target="_blank" rel="noopener noreferrer">
         <div><h3>Programa de la Festividad 2026</h3><span>Folleto oficial con todos los actos · PDF</span></div>
         <span class="descargar">Descargar ↓</span>
       </a>
@@ -651,9 +442,9 @@ form .boton:hover{background:var(--granate-oscuro)}
         <p>Una vez enviada la solicitud, la secretaría se pondrá en contacto para confirmar el alta y la forma de pago de la cuota anual (8€).</p>
       </div>
 
-      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST">
+      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST" data-error-invalid="La letra del DNI/NIE no es válida" data-error-generic="No se ha podido enviar la solicitud. Inténtelo de nuevo o escriba a cofradiasantospatronossagunto@gmail.com">
         <input type="hidden" name="access_key" value="2b865f31-585a-4808-9c1e-cc7a540c2978">
-        <input type="checkbox" name="botcheck" class="honeypot" style="display:none">
+        <input type="checkbox" name="botcheck" class="honeypot">
         <input type="hidden" name="subject" value="Nueva solicitud de alta de cofrade">
         <input type="hidden" name="from_name" value="Web Cofradía Santos Patronos">
         <div class="campo"><label for="nombre">Nombre *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name"></div>
@@ -678,7 +469,7 @@ form .boton:hover{background:var(--granate-oscuro)}
         </div>
         <div class="campo ancho"><label for="mensaje">Observaciones</label><textarea id="mensaje" name="mensaje" placeholder="Cualquier información que desee hacernos llegar"></textarea></div>
         <label class="consentimiento"><input type="checkbox" id="privacidad" required>
-          <span>He leído y acepto la <a href="/politica-privacidad" target="_blank" rel="noopener">política de privacidad</a>. Los datos facilitados serán tratados por la Cofradía de los Santos Abdón y Senén únicamente para la gestión del alta y las comunicaciones propias de la hermandad. *</span>
+          <span>He leído y acepto la <a href="/politica-privacidad" target="_blank" rel="noopener noreferrer">política de privacidad</a>. Los datos facilitados serán tratados por la Cofradía de los Santos Abdón y Senén únicamente para la gestión del alta y las comunicaciones propias de la hermandad. *</span>
         </label>
         <button class="boton" type="submit">Enviar solicitud</button>
         <p class="form-ok" id="form-ok" role="status">Gracias. Hemos recibido su solicitud de alta: la secretaría de la Cofradía se pondrá en contacto con usted en los próximos días.</p>
@@ -689,13 +480,13 @@ form .boton:hover{background:var(--granate-oscuro)}
 </main>
 
 <!-- ===================== CONTACTO / PIE ===================== -->
-<footer id="contacto">
+<footer id="contacto" aria-label="Contacto y pie de página">
   <div class="wrap">
     <div class="contacto-grid">
       <div>
         <picture>
           <source srcset="/assets/logo-footer.webp" type="image/webp">
-          <img class="logo-pie" src="/assets/logo-footer.png" alt="Emblema de la Cofradía" width="120" height="168" loading="lazy">
+          <img class="logo-pie" src="/assets/logo-footer.png" alt="Emblema de la Cofradía" width="120" height="168" loading="lazy" decoding="async">
         </picture>
         <h2>Cofradía<br>Santos Patronos<br>Sagunto</h2>
         <p class="lema-pie">S.S. Abdón y Senén · Patronos de Sagunto desde 1644</p>
@@ -704,87 +495,26 @@ form .boton:hover{background:var(--granate-oscuro)}
         <h3>Sede canónica</h3>
         <p>Iglesia parroquial de Santa María<br>Plaça Major, s/n<br>46500 Sagunto (Valencia)</p>
         <div class="mapa-caja">
-          <iframe src="https://www.google.com/maps?q=Iglesia+Parroquial+de+Santa+Mar%C3%ADa,+Pla%C3%A7a+Major,+Sagunto&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la Iglesia parroquial de Santa María, Sagunto"></iframe>
+          <iframe src="https://www.google.com/maps?q=Iglesia+Parroquial+de+Santa+Mar%C3%ADa,+Pla%C3%A7a+Major,+Sagunto&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer" title="Mapa de la Iglesia parroquial de Santa María, Sagunto"></iframe>
         </div>
-        <a class="mapa-enlace" href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Parroquial%20de%20Santa%20Mar%C3%ADa%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunto%2C%20Valencia" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+        <a class="mapa-enlace" href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Parroquial%20de%20Santa%20Mar%C3%ADa%2C%20Pla%C3%A7a%20Major%2C%2046500%20Sagunto%2C%20Valencia" target="_blank" rel="noopener noreferrer">Abrir en Google Maps →</a>
       </div>
       <div>
         <h3>Contacto</h3>
         <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener">cofradiasantospatronossagunto@gmail.com</a><br>
-          <a href="https://www.instagram.com/santospatronossagunto/" target="_blank" rel="noopener">Instagram · @santospatronossagunto</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener noreferrer">cofradiasantospatronossagunto@gmail.com</a><br>
+          <a href="https://www.instagram.com/santospatronossagunto/" target="_blank" rel="noopener noreferrer">Instagram · @santospatronossagunto</a>
         </p>
       </div>
     </div>
-    <div class="pie">
+    <div class="pie" data-copyright="Cofradía de los Santos Abdón y Senén · Sagunto">
       <span>© 2026 Cofradía de los Santos Abdón y Senén · Sagunto</span>
-      <span><a href="/aviso-legal" style="color:inherit">Aviso legal</a> · <a href="/politica-privacidad" style="color:inherit">Política de privacidad</a></span>
+      <span><a href="/aviso-legal" class="pie-enlace">Aviso legal</a> · <a href="/politica-privacidad" class="pie-enlace">Política de privacidad</a></span>
     </div>
   </div>
 </footer>
 
-<script>
-document.getElementById('telefono').addEventListener('keydown', function(e){
-  if(e.key.length===1 && !/[0-9]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
-});
-document.getElementById('telefono').addEventListener('paste', function(e){
-  const t=(e.clipboardData||window.clipboardData).getData('text');
-  if(!/^[0-9]*$/.test(t)) e.preventDefault();
-});
-document.getElementById('dni').addEventListener('input', function(){this.value=this.value.toUpperCase()});
-document.getElementById('dni').addEventListener('keydown', function(e){
-  if(e.key.length===1 && !/[0-9A-Za-z]/.test(e.key) && !e.ctrlKey && !e.metaKey) e.preventDefault();
-});
-function validarDNI(valor){
-  valor=valor.toUpperCase().trim();
-  const letras='TRWAGMYFPDXBNJZSQVHLCKE';
-  let num;
-  if(/^[0-9]{8}[A-Z]$/.test(valor)){
-    num=parseInt(valor.substring(0,8));
-  } else if(/^[XYZ][0-9]{7}[A-Z]$/.test(valor)){
-    num=parseInt(valor[0].replace('X','0').replace('Y','1').replace('Z','2')+valor.substring(1,8));
-  } else {
-    return false;
-  }
-  return valor[valor.length-1]===letras[num%23];
-}
-document.getElementById('form-alta').addEventListener('submit', async function(e){
-  e.preventDefault();
-  if(!this.checkValidity()){ this.reportValidity(); return; }
-  if(!validarDNI(document.getElementById('dni').value)){
-    document.getElementById('dni').setCustomValidity('La letra del DNI/NIE no es válida');
-    document.getElementById('dni').reportValidity();
-    document.getElementById('dni').setCustomValidity('');
-    return;
-  }
-  const form = this;
-  const boton = form.querySelector('.boton');
-  boton.disabled = true;
-  try{
-    const respuesta = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    const datos = await respuesta.json();
-    if(datos.success){
-      document.getElementById('form-ok').classList.add('visible');
-      form.reset();
-      document.getElementById('form-ok').scrollIntoView({behavior:'smooth', block:'nearest'});
-    } else {
-      alert('No se ha podido enviar la solicitud. Inténtelo de nuevo o escriba a cofradiasantospatronossagunto@gmail.com');
-    }
-  } catch(err){
-    alert('No se ha podido enviar la solicitud. Inténtelo de nuevo o escriba a cofradiasantospatronossagunto@gmail.com');
-  } finally {
-    boton.disabled = false;
-  }
-});
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
-  document.getElementById('menu').classList.remove('abierto');
-}));
-document.querySelector('.pie span:first-child').textContent='© '+new Date().getFullYear()+' Cofradía de los Santos Abdón y Senén · Sagunto';
-</script>
+<script defer src="/main.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
