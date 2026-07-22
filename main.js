@@ -161,13 +161,6 @@
     btnTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   }
 
-  /* ---------- email obfuscation ---------- */
-  document.querySelectorAll('[data-email]').forEach(el=>{
-    const parts=el.dataset.email.split('@');
-    el.textContent=parts[0]+'@'+parts[1];
-    el.href='mailto:'+el.textContent;
-  });
-
   /* ---------- dynamic calendar ---------- */
   document.querySelectorAll('.calendario[data-year]').forEach(cal=>{
     const year=parseInt(cal.dataset.year);
