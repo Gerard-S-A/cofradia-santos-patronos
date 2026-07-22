@@ -10,11 +10,15 @@
 <link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/va">
 <link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/">
 
+<meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Confraria Sants Patrons Sagunt">
 <meta property="og:title" content="Confraria S.S. Abdó i Senent · Patrons de Sagunt">
 <meta property="og:description" content="Confraria dels Sants Patrons Abdó i Senent de Sagunt (València). Història, festivitat del 30 de juliol, programa d'actes, transparència i alta de nous confrares.">
 <meta property="og:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
+<meta property="og:image:width" content="634">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Anda processional amb les imatges de Sant Abdó i Sant Senent, patrons de Sagunt">
 <meta property="og:url" content="https://santospatronossagunto.com/va">
 <meta property="og:locale" content="ca_ES">
 <meta property="og:locale:alternate" content="es_ES">
@@ -33,7 +37,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles/cofradia-santos-patronos.css">
+<link rel="preload" href="/styles/cofradia-santos-patronos.min.css" as="style">
+<link rel="stylesheet" href="/styles/cofradia-santos-patronos.min.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -100,6 +105,33 @@
         "availability": "https://schema.org/InStock",
         "validFrom": "2026-07-01"
       }
+    },
+    {
+      "@type": "NewsArticle",
+      "headline": "Publicat el programa de la Festivitat 2026",
+      "datePublished": "2026-07-06",
+      "author": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "publisher": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "image": "https://santospatronossagunto.com/assets/anda-santos.jpg",
+      "url": "https://santospatronossagunto.com/va#novedades"
+    },
+    {
+      "@type": "NewsArticle",
+      "headline": "Celebrada la Junta General",
+      "datePublished": "2026-06-18",
+      "author": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "publisher": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "image": "https://santospatronossagunto.com/assets/anda-santos.jpg",
+      "url": "https://santospatronossagunto.com/va#novedades"
+    },
+    {
+      "@type": "NewsArticle",
+      "headline": "Obert el termini per a nous confrares",
+      "datePublished": "2026-05-12",
+      "author": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "publisher": { "@id": "https://santospatronossagunto.com/#organizacion" },
+      "image": "https://santospatronossagunto.com/assets/anda-santos.jpg",
+      "url": "https://santospatronossagunto.com/va#novedades"
     }
   ]
 }
@@ -108,7 +140,7 @@
 <body>
 
 <!-- ===================== NAVEGACIÓN ===================== -->
-<nav aria-label="Navegació principal">
+<nav aria-label="Navegació principal" role="navigation">
   <div class="nav-in">
     <a class="marca" href="#inicio" aria-label="Inici">
       <picture>
@@ -163,7 +195,7 @@
 
 <main>
 <!-- ===================== HISTORIA ===================== -->
-<section id="historia">
+<section id="historia" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Història</p>
     <h2 class="titulo">Una devoció arrelada a Sagunt</h2>
@@ -189,7 +221,7 @@
 </section>
 
 <!-- ===================== LOS SANTOS ===================== -->
-<section id="santos">
+<section id="santos" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Els Sants</p>
     <h2 class="titulo">Abdó i Senent, màrtirs i patrons</h2>
@@ -255,7 +287,7 @@
 </section>
 
 <!-- ===================== NOVEDADES ===================== -->
-<section id="novedades">
+<section id="novedades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Novetats</p>
     <h2 class="titulo">Últimes notícies de la Confraria</h2>
@@ -283,29 +315,21 @@
 </section>
 
 <!-- ===================== ACTIVIDADES ===================== -->
-<section id="actividades">
+<section id="actividades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Activitats · Festivitat 2026</p>
     <h2 class="titulo">Programa d'actes en honor als Sants Patrons</h2>
     <p class="lead">Festivitat dels gloriosos Sants Màrtirs Abdó i Senent · 29 i 30 de juliol de 2026. Els cultes tenen lloc a l'església parroquial de Santa Maria.</p>
 
     <div class="actividades-grid">
-      <div class="calendario" role="group" aria-label="Calendari de juliol de 2026">
+      <div class="calendario" role="group" aria-label="Calendari de juliol de 2026" data-year="2026" data-evento="29" data-evento-label="Tocs i volades de campanes" data-fiesta="30" data-fiesta-label="Festivitat dels Sants Patrons" data-mes="Juliol" data-leyenda-evento="Acte de la Confraria" data-leyenda-fiesta="Festivitat dels Patrons">
         <div class="cal-cab">
-          <h3>Juliol</h3><span>2026</span>
+          <h3>Juliol</h3><span class="cal-anyo"></span>
         </div>
-        <div class="cal-tabla" role="grid" aria-label="Calendari">
-          <div class="dia-sem" role="columnheader">L</div><div class="dia-sem" role="columnheader">T</div><div class="dia-sem" role="columnheader">C</div><div class="dia-sem" role="columnheader">J</div><div class="dia-sem" role="columnheader">V</div><div class="dia-sem" role="columnheader">S</div><div class="dia-sem" role="columnheader">D</div>
-          <div></div><div></div>
-          <div class="dia">1</div><div class="dia">2</div><div class="dia">3</div><div class="dia">4</div><div class="dia">5</div>
-          <div class="dia">6</div><div class="dia">7</div><div class="dia">8</div><div class="dia">9</div><div class="dia">10</div><div class="dia">11</div><div class="dia">12</div>
-          <div class="dia">13</div><div class="dia">14</div><div class="dia">15</div><div class="dia">16</div><div class="dia">17</div><div class="dia">18</div><div class="dia">19</div>
-          <div class="dia">20</div><div class="dia">21</div><div class="dia">22</div><div class="dia">23</div><div class="dia">24</div><div class="dia">25</div><div class="dia">26</div>
-          <div class="dia">27</div><div class="dia">28</div><div class="dia evento" role="gridcell" aria-label="29 de juliol: Tocs i volades de campanes" title="Tocs i volades de campanes">29</div><div class="dia fiesta" role="gridcell" aria-label="30 de juliol: Festivitat dels Sants Patrons" title="Festivitat dels Sants Patrons">30</div><div class="dia">31</div><div role="gridcell"></div><div role="gridcell"></div>
-        </div>
+        <div class="cal-tabla" role="grid" aria-label="Calendari"></div>
         <div class="cal-leyenda">
-          <span class="l1"><i></i>Acte de la Confraria</span>
-          <span class="l2"><i></i>Festivitat dels Patrons</span>
+          <span class="l1"><i></i><span class="cal-leyenda-ev"></span></span>
+          <span class="l2"><i></i><span class="cal-leyenda-fi"></span></span>
         </div>
       </div>
 
@@ -348,7 +372,7 @@
 </section>
 
 <!-- ===================== TRANSPARENCIA ===================== -->
-<section id="transparencia">
+<section id="transparencia" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Portal de transparència</p>
     <h2 class="titulo">Documentació pública</h2>
@@ -377,7 +401,7 @@
 </section>
 
 <!-- ===================== JUNTA DIRECTIVA ===================== -->
-<section id="junta">
+<section id="junta" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Junta Directiva</p>
     <h2 class="titulo">Membres de la Junta Directiva</h2>
@@ -425,7 +449,7 @@
 </section>
 
 <!-- ===================== REGISTRO ===================== -->
-<section id="registro">
+<section id="registro" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Fes-te confrare</p>
     <h2 class="titulo">Formulari d'alta de nous confrares</h2>
@@ -441,17 +465,17 @@
         <p>Una vegada enviada la sol·licitud, la secretaria es posarà en contacte per a confirmar l'alta i la forma de pagament de la quota anual (8€).</p>
       </div>
 
-      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST" data-error-invalid="La lletra del DNI/NIE no és vàlida" data-error-generic="No s'ha pogut enviar la sol·licitud. Torneu a intentar-ho o escriviu a cofradiasantospatronossagunto@gmail.com">
+      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST" data-error-invalid="La lletra del DNI/NIE no és vàlida" data-error-generic="No s'ha pogut enviar la sol·licitud. Torneu a intentar-ho o escriviu al nostre correu electrònic.">
         <input type="hidden" name="access_key" value="2b865f31-585a-4808-9c1e-cc7a540c2978">
         <input type="checkbox" name="botcheck" class="honeypot">
         <input type="hidden" name="subject" value="Nova sol·licitud d'alta de confrare (VA)">
         <input type="hidden" name="from_name" value="Web Confraria Sants Patrons">
-        <div class="campo"><label for="nombre">Nom *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name"></div>
-        <div class="campo"><label for="apellidos">Cognoms *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name"></div>
-        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + lletra majúscula. NIE: X/Y/Z + 7 números + lletra majúscula"></div>
-        <div class="campo"><label for="nacimiento">Data de naixement *</label><input id="nacimiento" name="nacimiento" type="date" required></div>
-        <div class="campo"><label for="email">Correu electrònic *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nom@correu.com" title="Introduïu un correu electrònic vàlid (ha de contindre @ i un domini)" autocomplete="email"></div>
-        <div class="campo"><label for="telefono">Telèfon *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduïu un número de telèfon de 9 dígits" autocomplete="tel"></div>
+        <div class="campo"><label for="nombre">Nom *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name" aria-describedby="err-nombre"><span class="error-msg" id="err-nombre">Introduïu el vostre nom</span></div>
+        <div class="campo"><label for="apellidos">Cognoms *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name" aria-describedby="err-apellidos"><span class="error-msg" id="err-apellidos">Introduïu els vostres cognoms</span></div>
+        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + lletra majúscula. NIE: X/Y/Z + 7 números + lletra majúscula" aria-describedby="err-dni"><span class="error-msg" id="err-dni">Introduïu un DNI o NIE vàlid</span></div>
+        <div class="campo"><label for="nacimiento">Data de naixement *</label><input id="nacimiento" name="nacimiento" type="date" required aria-describedby="err-nacimiento"><span class="error-msg" id="err-nacimiento">Introduïu la vostra data de naixement</span></div>
+        <div class="campo"><label for="email">Correu electrònic *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nom@correu.com" title="Introduïu un correu electrònic vàlid (ha de contindre @ i un domini)" autocomplete="email" aria-describedby="err-email"><span class="error-msg" id="err-email">Introduïu un correu electrònic vàlid</span></div>
+        <div class="campo"><label for="telefono">Telèfon *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduïu un número de telèfon de 9 dígits" autocomplete="tel" aria-describedby="err-telefono"><span class="error-msg" id="err-telefono">Introduïu un telèfon de 9 dígits</span></div>
         <div class="campo ancho"><label for="direccion">Adreça postal</label><input id="direccion" name="direccion" type="text" autocomplete="street-address"></div>
         <div class="campo"><label for="cuota">Modalitat de quota *</label>
           <select id="cuota" name="cuota" required>
@@ -479,7 +503,7 @@
 </main>
 
 <!-- ===================== CONTACTO / PIE ===================== -->
-<footer id="contacto" aria-label="Contacte i peu de pàgina">
+<footer id="contacto" aria-label="Contacte i peu de pàgina" role="contentinfo">
   <div class="wrap">
     <div class="contacto-grid">
       <div>
@@ -501,7 +525,7 @@
       <div>
         <h3>Contacte</h3>
         <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener noreferrer">cofradiasantospatronossagunto@gmail.com</a><br>
+          <a href="#" data-email="cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener noreferrer"></a><br>
           <a href="https://www.instagram.com/santospatronossagunto/" target="_blank" rel="noopener noreferrer">Instagram · @santospatronossagunto</a>
         </p>
       </div>

@@ -11,11 +11,15 @@
 <link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/va">
 <link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/">
 
+<meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cofradía Santos Patronos Sagunto">
 <meta property="og:title" content="Cofradía S.S. Abdón y Senén · Patronos de Sagunto">
 <meta property="og:description" content="Cofradía de los Santos Patronos Abdón y Senén de Sagunto (Valencia). Historia, festividad del 30 de julio, programa de actos, transparencia y alta de nuevos cofrades.">
 <meta property="og:image" content="https://santospatronossagunto.com/assets/anda-santos.jpg">
+<meta property="og:image:width" content="634">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Anda procesional con las imágenes de San Abdón y San Senén, patronos de Sagunto">
 <meta property="og:url" content="https://santospatronossagunto.com/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="ca_ES">
@@ -34,7 +38,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles/cofradia-santos-patronos.css">
+<link rel="preload" href="/styles/cofradia-santos-patronos.min.css" as="style">
+<link rel="stylesheet" href="/styles/cofradia-santos-patronos.min.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -109,7 +114,7 @@
 <body>
 
 <!-- ===================== NAVEGACIÓN ===================== -->
-<nav aria-label="Navegación principal">
+<nav aria-label="Navegación principal" role="navigation">
   <div class="nav-in">
     <a class="marca" href="#inicio" aria-label="Inicio">
       <picture>
@@ -164,7 +169,7 @@
 
 <main>
 <!-- ===================== HISTORIA ===================== -->
-<section id="historia">
+<section id="historia" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Historia</p>
     <h2 class="titulo">Una devoción arraigada en Sagunto</h2>
@@ -190,7 +195,7 @@
 </section>
 
 <!-- ===================== LOS SANTOS ===================== -->
-<section id="santos">
+<section id="santos" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Los Santos</p>
     <h2 class="titulo">Abdón y Senén, mártires y patronos</h2>
@@ -256,7 +261,7 @@
 </section>
 
 <!-- ===================== NOVEDADES ===================== -->
-<section id="novedades">
+<section id="novedades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Novedades</p>
     <h2 class="titulo">Últimas noticias de la Cofradía</h2>
@@ -284,29 +289,21 @@
 </section>
 
 <!-- ===================== ACTIVIDADES ===================== -->
-<section id="actividades">
+<section id="actividades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Actividades · Festividad 2026</p>
     <h2 class="titulo">Programa de actos en honor a los Santos Patronos</h2>
     <p class="lead">Festividad de los gloriosos Santos Mártires Abdón y Senén · 29 y 30 de julio de 2026. Los cultos tienen lugar en la iglesia parroquial de Santa María.</p>
 
     <div class="actividades-grid">
-      <div class="calendario" role="group" aria-label="Calendario de julio de 2026">
+      <div class="calendario" role="group" aria-label="Calendario de julio de 2026" data-year="2026" data-evento="29" data-evento-label="Toques y vuelos de campanas" data-fiesta="30" data-fiesta-label="Festividad de los Santos Patronos" data-mes="Julio" data-leyenda-evento="Acto de la Cofradía" data-leyenda-fiesta="Festividad de los Patronos">
         <div class="cal-cab">
-          <h3>Julio</h3><span>2026</span>
+          <h3>Julio</h3><span class="cal-anyo"></span>
         </div>
-        <div class="cal-tabla" role="grid" aria-label="Calendario">
-          <div class="dia-sem" role="columnheader">L</div><div class="dia-sem" role="columnheader">M</div><div class="dia-sem" role="columnheader">X</div><div class="dia-sem" role="columnheader">J</div><div class="dia-sem" role="columnheader">V</div><div class="dia-sem" role="columnheader">S</div><div class="dia-sem" role="columnheader">D</div>
-          <div></div><div></div>
-          <div class="dia">1</div><div class="dia">2</div><div class="dia">3</div><div class="dia">4</div><div class="dia">5</div>
-          <div class="dia">6</div><div class="dia">7</div><div class="dia">8</div><div class="dia">9</div><div class="dia">10</div><div class="dia">11</div><div class="dia">12</div>
-          <div class="dia">13</div><div class="dia">14</div><div class="dia">15</div><div class="dia">16</div><div class="dia">17</div><div class="dia">18</div><div class="dia">19</div>
-          <div class="dia">20</div><div class="dia">21</div><div class="dia">22</div><div class="dia">23</div><div class="dia">24</div><div class="dia">25</div><div class="dia">26</div>
-          <div class="dia">27</div><div class="dia">28</div><div class="dia evento" role="gridcell" aria-label="29 de julio: Toques y vuelos de campanas" title="Toques y vuelos de campanas">29</div><div class="dia fiesta" role="gridcell" aria-label="30 de julio: Festividad de los Santos Patronos" title="Festividad de los Santos Patronos">30</div><div class="dia">31</div><div role="gridcell"></div><div role="gridcell"></div>
-        </div>
+        <div class="cal-tabla" role="grid" aria-label="Calendario"></div>
         <div class="cal-leyenda">
-          <span class="l1"><i></i>Acto de la Cofradía</span>
-          <span class="l2"><i></i>Festividad de los Patronos</span>
+          <span class="l1"><i></i><span class="cal-leyenda-ev"></span></span>
+          <span class="l2"><i></i><span class="cal-leyenda-fi"></span></span>
         </div>
       </div>
 
@@ -349,7 +346,7 @@
 </section>
 
 <!-- ===================== TRANSPARENCIA ===================== -->
-<section id="transparencia">
+<section id="transparencia" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Portal de transparencia</p>
     <h2 class="titulo">Documentación pública</h2>
@@ -378,7 +375,7 @@
 </section>
 
 <!-- ===================== JUNTA DIRECTIVA ===================== -->
-<section id="junta">
+<section id="junta" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Junta Directiva</p>
     <h2 class="titulo">Miembros de la Junta Directiva</h2>
@@ -426,7 +423,7 @@
 </section>
 
 <!-- ===================== REGISTRO ===================== -->
-<section id="registro">
+<section id="registro" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Hazte cofrade</p>
     <h2 class="titulo">Formulario de alta de nuevos cofrades</h2>
@@ -442,17 +439,17 @@
         <p>Una vez enviada la solicitud, la secretaría se pondrá en contacto para confirmar el alta y la forma de pago de la cuota anual (8€).</p>
       </div>
 
-      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST" data-error-invalid="La letra del DNI/NIE no es válida" data-error-generic="No se ha podido enviar la solicitud. Inténtelo de nuevo o escriba a cofradiasantospatronossagunto@gmail.com">
+      <form id="form-alta" action="https://api.web3forms.com/submit" method="POST" data-error-invalid="La letra del DNI/NIE no es válida" data-error-generic="No se ha podido enviar la solicitud. Inténtelo de nuevo o escriba a nuestro correo electrónico.">
         <input type="hidden" name="access_key" value="2b865f31-585a-4808-9c1e-cc7a540c2978">
         <input type="checkbox" name="botcheck" class="honeypot">
         <input type="hidden" name="subject" value="Nueva solicitud de alta de cofrade">
         <input type="hidden" name="from_name" value="Web Cofradía Santos Patronos">
-        <div class="campo"><label for="nombre">Nombre *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name"></div>
-        <div class="campo"><label for="apellidos">Apellidos *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name"></div>
-        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + letra mayúscula. NIE: X/Y/Z + 7 números + letra mayúscula"></div>
-        <div class="campo"><label for="nacimiento">Fecha de nacimiento *</label><input id="nacimiento" name="nacimiento" type="date" required></div>
-        <div class="campo"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nombre@correo.com" title="Introduzca un correo electrónico válido (debe contener @ y un dominio)" autocomplete="email"></div>
-        <div class="campo"><label for="telefono">Teléfono *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduzca un número de teléfono de 9 dígitos" autocomplete="tel"></div>
+        <div class="campo"><label for="nombre">Nombre *</label><input id="nombre" name="nombre" type="text" required autocomplete="given-name" aria-describedby="err-nombre"><span class="error-msg" id="err-nombre">Introduzca su nombre</span></div>
+        <div class="campo"><label for="apellidos">Apellidos *</label><input id="apellidos" name="apellidos" type="text" required autocomplete="family-name" aria-describedby="err-apellidos"><span class="error-msg" id="err-apellidos">Introduzca sus apellidos</span></div>
+        <div class="campo"><label for="dni">DNI / NIE *</label><input id="dni" name="dni" type="text" required maxlength="9" pattern="[0-9]{8}[A-Z]|[XYZ][0-9]{7}[A-Z]" placeholder="12345678A" title="DNI: 8 números + letra mayúscula. NIE: X/Y/Z + 7 números + letra mayúscula" aria-describedby="err-dni"><span class="error-msg" id="err-dni">Introduzca un DNI o NIE válido</span></div>
+        <div class="campo"><label for="nacimiento">Fecha de nacimiento *</label><input id="nacimiento" name="nacimiento" type="date" required aria-describedby="err-nacimiento"><span class="error-msg" id="err-nacimiento">Introduzca su fecha de nacimiento</span></div>
+        <div class="campo"><label for="email">Correo electrónico *</label><input id="email" name="email" type="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="nombre@correo.com" title="Introduzca un correo electrónico válido (debe contener @ y un dominio)" autocomplete="email" aria-describedby="err-email"><span class="error-msg" id="err-email">Introduzca un correo electrónico válido</span></div>
+        <div class="campo"><label for="telefono">Teléfono *</label><input id="telefono" name="telefono" type="tel" required maxlength="9" inputmode="numeric" pattern="[0-9]{9}" placeholder="612345678" title="Introduzca un número de teléfono de 9 dígitos" autocomplete="tel" aria-describedby="err-telefono"><span class="error-msg" id="err-telefono">Introduzca un teléfono de 9 dígitos</span></div>
         <div class="campo ancho"><label for="direccion">Dirección postal</label><input id="direccion" name="direccion" type="text" autocomplete="street-address"></div>
         <div class="campo"><label for="cuota">Modalidad de cuota *</label>
           <select id="cuota" name="cuota" required>
@@ -480,7 +477,7 @@
 </main>
 
 <!-- ===================== CONTACTO / PIE ===================== -->
-<footer id="contacto" aria-label="Contacto y pie de página">
+<footer id="contacto" aria-label="Contacto y pie de página" role="contentinfo">
   <div class="wrap">
     <div class="contacto-grid">
       <div>
@@ -502,7 +499,7 @@
       <div>
         <h3>Contacto</h3>
         <p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener noreferrer">cofradiasantospatronossagunto@gmail.com</a><br>
+          <a href="#" data-email="cofradiasantospatronossagunto@gmail.com" target="_blank" rel="noopener noreferrer"></a><br>
           <a href="https://www.instagram.com/santospatronossagunto/" target="_blank" rel="noopener noreferrer">Instagram · @santospatronossagunto</a>
         </p>
       </div>

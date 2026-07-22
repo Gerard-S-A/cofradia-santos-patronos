@@ -19,4 +19,40 @@
     <xhtml:link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/va"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/"/>
   </url>
+  <url>
+    <loc>https://santospatronossagunto.com/aviso-legal</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://santospatronossagunto.com/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/aviso-legal-va"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/aviso-legal"/>
+  </url>
+  <url>
+    <loc>https://santospatronossagunto.com/aviso-legal-va</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://santospatronossagunto.com/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/aviso-legal-va"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/aviso-legal"/>
+  </url>
+  <url>
+    <loc>https://santospatronossagunto.com/politica-privacidad</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://santospatronossagunto.com/politica-privacidad"/>
+    <xhtml:link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/politica-privacidad-va"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/politica-privacidad"/>
+  </url>
+  <url>
+    <loc>https://santospatronossagunto.com/politica-privacidad-va</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://santospatronossagunto.com/politica-privacidad"/>
+    <xhtml:link rel="alternate" hreflang="ca-valencia" href="https://santospatronossagunto.com/politica-privacidad-va"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://santospatronossagunto.com/politica-privacidad"/>
+  </url>
 </urlset>
