@@ -5,7 +5,9 @@
     { "source": "/aviso-legal", "destination": "/aviso-legal.html" },
     { "source": "/aviso-legal-va", "destination": "/aviso-legal-va.html" },
     { "source": "/politica-privacidad", "destination": "/politica-privacidad.html" },
-    { "source": "/politica-privacidad-va", "destination": "/politica-privacidad-va.html" }
+    { "source": "/politica-privacidad-va", "destination": "/politica-privacidad-va.html" },
+    { "source": "/admin/login", "destination": "/admin/login.html" },
+    { "source": "/admin", "destination": "/admin/index.html" }
   ],
   "headers": [
     {
@@ -18,7 +20,7 @@
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://api.web3forms.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://api.web3forms.com https://vitals.vercel-insights.com; base-uri 'self'; form-action https://api.web3forms.com; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' https://api.web3forms.com https://esm.sh; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://api.web3forms.com https://vitals.vercel-insights.com https://dnelcttblraydsuvxntv.supabase.co; base-uri 'self'; form-action https://api.web3forms.com; frame-ancestors 'self'"
         }
       ]
     }

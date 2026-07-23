@@ -153,7 +153,7 @@
       <ul class="nav-links" id="menu">
         <li><a href="#historia">Història</a></li>
         <li><a href="#santos">Els Sants</a></li>
-        <li><a href="#novedades">Novetats</a></li>
+        <!-- <li><a href="#novedades">Novetats</a></li> -->
         <li><a href="#actividades">Activitats</a></li>
         <li><a href="#transparencia">Transparència</a></li>
         <li><a href="#junta">Junta Directiva</a></li>
@@ -287,6 +287,7 @@
 </section>
 
 <!-- ===================== NOVEDADES ===================== -->
+<!--
 <section id="novedades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Novetats</p>
@@ -313,6 +314,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- ===================== ACTIVIDADES ===================== -->
 <section id="actividades" class="fade-in">
@@ -379,22 +381,11 @@
     <p class="lead">En compliment dels nostres estatuts, posem a disposició dels confrares i del públic la documentació institucional de la germandat.</p>
 
     <div class="docs">
-      <a class="doc" href="docs/estatutos.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Estatuts de la Confraria</h3><span>Projecte d'estatuts · PDF</span></div>
-        <span class="descargar">Descarregar ↓</span>
-      </a>
-      <a class="doc" href="docs/memoria-2024-2025.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Memòria de l'exercici 2024/2025</h3><span>Resum d'activitats, cultes i obra social · PDF</span></div>
-        <span class="descargar">Descarregar ↓</span>
-      </a>
       <a class="doc" href="#junta">
         <div><h3>Junta Directiva</h3><span>Composició i càrrecs per al període 2026–2030</span></div>
         <span class="descargar">Veure membres ↓</span>
       </a>
-      <a class="doc" href="docs/programa-festividad-2026.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Programa de la Festivitat 2026</h3><span>Fullet oficial amb tots els actes · PDF</span></div>
-        <span class="descargar">Descarregar ↓</span>
-      </a>
+      <div id="docs-dinamicos"></div>
     </div>
     <p class="transparencia-nota">Per a qualsevol consulta sobre la documentació publicada, o per a sol·licitar informació addicional, pot dirigir-se a la secretaria de la Confraria a través de la secció de contacte.</p>
   </div>
@@ -532,10 +523,14 @@
     </div>
     <div class="pie" data-copyright="Confraria dels Sants Abdó i Senent · Sagunt">
       <span>© 2026 Confraria dels Sants Abdó i Senent · Sagunt</span>
-      <span><a href="/aviso-legal-va" class="pie-enlace">Avís legal</a> · <a href="/politica-privacidad-va" class="pie-enlace">Política de privacitat</a></span>
+      <span><a href="/aviso-legal-va" class="pie-enlace">Avís legal</a> · <a href="/politica-privacidad-va" class="pie-enlace">Política de privacitat</a> · <a href="/admin/login" class="pie-enlace">Accés Junta</a></span>
     </div>
   </div>
 </footer>
+
+<button class="volver-arriba" aria-label="Tornar amunt" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <script defer src="/main.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>

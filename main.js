@@ -161,6 +161,35 @@
     btnTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   }
 
+  /* ---------- transparency: load published docs ---------- */
+  const docsDinamicos=document.getElementById('docs-dinamicos');
+  if(docsDinamicos){
+    const SB_URL='https://dnelcttblraydsuvxntv.supabase.co';
+    const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRuZWxjdHRibHJheWRzdXZ4bnR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ4MTMwNTYsImV4cCI6MjEwMDM4OTA1Nn0.9RRGrRpnCFNgefDv76u9UmZyXiir3VA5x8XdC4ARKK4';
+    fetch(SB_URL+'/rest/v1/archivos?publicado=eq.true&select=*,categorias(nombre)',{
+      headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY}
+    })
+    .then(r=>r.json())
+    .then(archivos=>{
+      if(!archivos||!archivos.length)return;
+      archivos.forEach(a=>{
+        const ext=a.archivo_tipo?.includes('pdf')?'PDF'
+          :a.archivo_tipo?.includes('word')||a.archivo_tipo?.includes('document')?'Word'
+          :a.archivo_tipo?.includes('excel')||a.archivo_tipo?.includes('sheet')?'Excel'
+          :a.archivo_tipo?.includes('image')?'JPG':'Documento';
+        const cat=a.categorias?.nombre||'';
+        const link=document.createElement('a');
+        link.className='doc';
+        link.href=SB_URL+'/storage/v1/object/public/archivos/'+a.archivo_path;
+        link.target='_blank';
+        link.rel='noopener noreferrer';
+        link.innerHTML='<div><h3>'+a.nombre+'</h3><span>'+(a.descripcion?a.descripcion+' · ':'')+(cat?cat+' · ':'')+ext+'</span></div><span class="descargar">Descargar ↓</span>';
+        docsDinamicos.appendChild(link);
+      });
+    })
+    .catch(()=>{});
+  }
+
   /* ---------- dynamic calendar ---------- */
   document.querySelectorAll('.calendario[data-year]').forEach(cal=>{
     const year=parseInt(cal.dataset.year);

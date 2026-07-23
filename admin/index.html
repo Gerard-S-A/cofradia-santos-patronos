@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administración · Cofradía Santos Patronos</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200..500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/admin.css">
+<link rel="icon" href="/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+</head>
+<body>
+  <nav class="admin-nav">
+    <div class="admin-nav-in">
+      <a href="/" class="admin-marca">
+        <img src="/assets/logo-nav.png" alt="" width="32">
+        <span>Administración</span>
+      </a>
+      <div class="admin-nav-derecha">
+        <span id="user-info" class="admin-user"></span>
+        <button id="btn-logout" class="boton-logout">Salir</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="admin-main">
+    <div class="admin-wrap">
+      <header class="admin-header">
+        <h1>Documentos</h1>
+        <p>Gestiona la documentación de la Cofradía. Los archivos publicados aparecen en la sección <a href="/#transparencia">Transparencia</a> de la web.</p>
+      </header>
+
+      <!-- Subida de archivos -->
+      <section id="seccion-subida" class="admin-seccion">
+        <h2>Subir archivo</h2>
+        <form id="form-subida" class="form-subida">
+          <div class="subida-campos">
+            <div class="campo">
+              <label for="file-input">Archivo</label>
+              <input type="file" id="file-input" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg" required>
+              <span class="campo-nota">PDF, Word, Excel o JPG · Máx. 50 MB</span>
+            </div>
+            <div class="campo">
+              <label for="file-name">Nombre</label>
+              <input type="text" id="file-name" placeholder="Nombre del documento" required>
+            </div>
+            <div class="campo">
+              <label for="file-desc">Descripción</label>
+              <input type="text" id="file-desc" placeholder="Descripción breve (opcional)">
+            </div>
+            <div class="campo">
+              <label for="file-category">Categoría</label>
+              <select id="file-category" required></select>
+            </div>
+          </div>
+          <div id="subida-estado" class="subida-estado"></div>
+          <button type="submit" class="boton-subir" id="btn-subir">Subir archivo</button>
+        </form>
+      </section>
+
+      <!-- Listado de archivos -->
+      <section class="admin-seccion">
+        <div class="admin-seccion-header">
+          <h2>Archivos</h2>
+          <div class="filtro-categorias">
+            <button class="filtro-btn activo" data-cat="todos">Todos</button>
+          </div>
+        </div>
+        <div id="lista-archivos" class="lista-archivos">
+          <p class="lista-vacia">Cargando archivos...</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="modal-confirm" class="modal" hidden>
+    <div class="modal-card">
+      <p id="modal-texto"></p>
+      <div class="modal-botones">
+        <button id="modal-cancelar" class="modal-btn modal-cancelar">Cancelar</button>
+        <button id="modal-aceptar" class="modal-btn modal-aceptar">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

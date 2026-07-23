@@ -127,7 +127,7 @@
       <ul class="nav-links" id="menu">
         <li><a href="#historia">Historia</a></li>
         <li><a href="#santos">Los Santos</a></li>
-        <li><a href="#novedades">Novedades</a></li>
+        <!-- <li><a href="#novedades">Novedades</a></li> -->
         <li><a href="#actividades">Actividades</a></li>
         <li><a href="#transparencia">Transparencia</a></li>
         <li><a href="#junta">Junta Directiva</a></li>
@@ -261,6 +261,7 @@
 </section>
 
 <!-- ===================== NOVEDADES ===================== -->
+<!--
 <section id="novedades" class="fade-in">
   <div class="wrap">
     <p class="eyebrow">Novedades</p>
@@ -287,6 +288,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- ===================== ACTIVIDADES ===================== -->
 <section id="actividades" class="fade-in">
@@ -353,22 +355,11 @@
     <p class="lead">En cumplimiento de nuestros estatutos, ponemos a disposición de los cofrades y del público la documentación institucional de la hermandad.</p>
 
     <div class="docs">
-      <a class="doc" href="docs/estatutos.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Estatutos de la Cofradía</h3><span>Proyecto de estatutos · PDF</span></div>
-        <span class="descargar">Descargar ↓</span>
-      </a>
-      <a class="doc" href="docs/memoria-2024-2025.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Memoria del ejercicio 2024/2025</h3><span>Resumen de actividades, cultos y obra social · PDF</span></div>
-        <span class="descargar">Descargar ↓</span>
-      </a>
       <a class="doc" href="#junta">
         <div><h3>Junta Directiva</h3><span>Composición y cargos para el periodo 2026–2030</span></div>
         <span class="descargar">Ver miembros ↓</span>
       </a>
-      <a class="doc" href="docs/programa-festividad-2026.pdf" target="_blank" rel="noopener noreferrer">
-        <div><h3>Programa de la Festividad 2026</h3><span>Folleto oficial con todos los actos · PDF</span></div>
-        <span class="descargar">Descargar ↓</span>
-      </a>
+      <div id="docs-dinamicos"></div>
     </div>
     <p class="transparencia-nota">Para cualquier consulta sobre la documentación publicada, o para solicitar información adicional, puede dirigirse a la secretaría de la Cofradía a través de la sección de contacto.</p>
   </div>
@@ -506,10 +497,14 @@
     </div>
     <div class="pie" data-copyright="Cofradía de los Santos Abdón y Senén · Sagunto">
       <span>© 2026 Cofradía de los Santos Abdón y Senén · Sagunto</span>
-      <span><a href="/aviso-legal" class="pie-enlace">Aviso legal</a> · <a href="/politica-privacidad" class="pie-enlace">Política de privacidad</a></span>
+      <span><a href="/aviso-legal" class="pie-enlace">Aviso legal</a> · <a href="/politica-privacidad" class="pie-enlace">Política de privacidad</a> · <a href="/admin/login" class="pie-enlace">Acceso Junta</a></span>
     </div>
   </div>
 </footer>
+
+<button class="volver-arriba" aria-label="Volver arriba" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <script defer src="/main.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
