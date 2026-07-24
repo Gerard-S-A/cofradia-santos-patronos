@@ -41,8 +41,8 @@ nav{position:sticky;top:0;z-index:50;background:rgba(253,252,249,.92);backdrop-f
 .nav-links a.cta{background:var(--granate);color:#fff;padding:9px 18px;border-radius:999px;border:none}
 .nav-links a.cta:hover{background:var(--granate-oscuro)}
 @media(max-width:960px){.nav-links{display:none}.nav-links.abierto{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--papel);flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--linea);gap:14px}}
-.hamburguesa{display:none;background:none;border:1px solid var(--linea);border-radius:8px;padding:10px 14px;min-width:44px;min-height:44px;font-family:var(--sans);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--granate);cursor:pointer;display:flex;align-items:center;justify-content:center}
-@media(max-width:960px){.hamburguesa{display:block}}
+.hamburguesa{display:none;background:none;border:1px solid var(--linea);border-radius:8px;padding:10px 14px;min-width:44px;min-height:44px;font-family:var(--sans);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--granate);cursor:pointer;align-items:center;justify-content:center}
+@media(max-width:960px){.hamburguesa{display:flex}}
 .nav-derecha{display:flex;align-items:center;gap:10px}
 .idioma-selector{position:relative;font-family:var(--sans)}
 .idioma-selector summary{list-style:none;cursor:pointer;background:none;border:1px solid var(--linea);border-radius:8px;padding:8px 12px;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--granate);display:flex;align-items:center;gap:6px}
