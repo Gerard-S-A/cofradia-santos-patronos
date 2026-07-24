@@ -74,7 +74,7 @@
       dni.setAttribute('aria-invalid','true');
       const errDni=document.getElementById('err-dni');
       if(errDni)errDni.classList.add('visible');
-      dni.setCustomValidity(dni.dataset.errorInvalid);
+      dni.setCustomValidity(form.dataset.errorInvalid);
       dni.reportValidity();
       dni.setCustomValidity('');
       return;
@@ -197,6 +197,7 @@
     const fiesta=parseInt(cal.dataset.fiesta);
     const evLabel=cal.dataset.eventoLabel||'';
     const fiLabel=cal.dataset.fiestaLabel||'';
+    const mes=cal.dataset.mes||'julio';
     const diasSem=['L','M','X','J','V','S','D'];
     const tabla=cal.querySelector('.cal-tabla');
     cal.querySelector('.cal-anyo').textContent=year;
@@ -211,8 +212,8 @@
       const cell=document.createElement('div');
       cell.className='dia';
       cell.textContent=d;
-      if(d===evento){cell.classList.add('evento');cell.setAttribute('role','gridcell');cell.setAttribute('aria-label',d+' de julio: '+evLabel);cell.title=evLabel;}
-      if(d===fiesta){cell.classList.add('fiesta');cell.setAttribute('role','gridcell');cell.setAttribute('aria-label',d+' de julio: '+fiLabel);cell.title=fiLabel;}
+      if(d===evento){cell.classList.add('evento');cell.setAttribute('role','gridcell');cell.setAttribute('aria-label',d+' de '+mes+': '+evLabel);cell.title=evLabel;}
+      if(d===fiesta){cell.classList.add('fiesta');cell.setAttribute('role','gridcell');cell.setAttribute('aria-label',d+' de '+mes+': '+fiLabel);cell.title=fiLabel;}
       tabla.appendChild(cell);
     }
   });

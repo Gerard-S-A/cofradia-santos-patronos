@@ -65,7 +65,7 @@ if (isLogin) {
 /* ===== ADMIN PAGE ===== */
 if (isAdmin) {
   const user = await getUser();
-  if (!user) { window.location.href = '/admin/login.html'; }
+  if (!user) { window.location.href = '/admin/login.html'; } else {
 
   const profile = await getProfile(user.id);
   const isPresidente = profile?.rol === 'presidente';
@@ -169,6 +169,13 @@ if (isAdmin) {
 
   /* --- List files --- */
   let filtroActual = 'todos';
+  let busqueda = '';
+
+  const buscadorInput = document.getElementById('buscador');
+  buscadorInput.addEventListener('input', () => {
+    busqueda = buscadorInput.value.trim().toLowerCase();
+    renderArchivos();
+  });
 
   filtroContainer.addEventListener('click', (e) => {
     const btn = e.target.closest('.filtro-btn');
@@ -192,12 +199,22 @@ if (isAdmin) {
 
   function renderArchivos() {
     const container = document.getElementById('lista-archivos');
-    const filtered = filtroActual === 'todos'
+    let filtered = filtroActual === 'todos'
       ? allArchivos
       : allArchivos.filter(a => a.categoria_id === parseInt(filtroActual));
 
+    if (busqueda) {
+      filtered = filtered.filter(a =>
+        (a.nombre || '').toLowerCase().includes(busqueda) ||
+        (a.descripcion || '').toLowerCase().includes(busqueda)
+      );
+    }
+
     if (filtered.length === 0) {
-      container.innerHTML = '<p class="lista-vacia">No hay archivos.</p>';
+      const msg = busqueda
+        ? 'No se encontraron documentos con ese término.'
+        : 'No hay archivos.';
+      container.innerHTML = `<p class="lista-vacia">${msg}</p>`;
       return;
     }
 
@@ -230,6 +247,7 @@ if (isAdmin) {
         <div class="archivo-fila" data-id="${a.id}">
           <div class="archivo-info">
             <div class="archivo-nombre">${escapeHtml(a.nombre)}</div>
+            ${a.descripcion ? `<div class="archivo-desc">${escapeHtml(a.descripcion)}</div>` : ''}
             <div class="archivo-meta">
               <span>${cat}</span>
               <span>${ext}</span>
@@ -298,6 +316,7 @@ if (isAdmin) {
 
   /* --- Init --- */
   await loadArchivos();
+  }
 }
 
 function escapeHtml(str) {

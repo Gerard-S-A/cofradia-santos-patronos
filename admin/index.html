@@ -65,8 +65,14 @@
       <section class="admin-seccion">
         <div class="admin-seccion-header">
           <h2>Archivos</h2>
-          <div class="filtro-categorias">
-            <button class="filtro-btn activo" data-cat="todos">Todos</button>
+          <div class="archivos-toolbar">
+            <div class="buscador-wrap">
+              <svg class="buscador-icono" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="buscador" class="buscador-input" placeholder="Buscar documento…">
+            </div>
+            <div class="filtro-categorias">
+              <button class="filtro-btn activo" data-cat="todos">Todos</button>
+            </div>
           </div>
         </div>
         <div id="lista-archivos" class="lista-archivos">

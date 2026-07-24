@@ -27,6 +27,13 @@ p, li{color:var(--texto-secundario);margin-bottom:12px}
 ul{padding-left:22px;margin-bottom:12px}
 strong{color:var(--tinta)}
 table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:.92rem}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);vertical-align:top}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);vertical-align:top;word-break:break-word}
 th{color:var(--granate);font-weight:600;width:32%}
 .legal-final{margin-top:40px}
+@media(max-width:640px){
+  .wrap{padding:40px 16px 60px}
+  th,td{padding:8px 8px;font-size:.85rem}
+  th{width:auto;display:block;border-bottom:none;padding-bottom:0}
+  td{display:block;padding-top:2px}
+  table{font-size:.88rem}
+}
